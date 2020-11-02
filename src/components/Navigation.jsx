@@ -13,9 +13,33 @@ const navMargin = select('& a', {
   '@media(max-width: 992px)': {
   margin: 0
     }
-})
+});
 
-const Navigation = () => {
+class Navigation extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isActive: false,
+    };
+  }
+
+  getClassName() {
+    if (this.state.isActive) {
+      return 'active';
+    }
+    return null;
+  }
+
+  handlePage = () => {
+    const pathname = window.location.pathname;
+    if (pathname === '/about') {
+      this.setState({ isActive: true });
+    } else {
+      this.setState({ isActive: false });
+    }
+  };
+
+  render() {
   return (
     <Navbar collapseOnSelect expand="lg">
       <Navbar.Brand href="/">
@@ -24,7 +48,9 @@ const Navigation = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className={`mr-auto ${navStyle} ${navMargin}`}>
-          <Nav.Link href="/about">About</Nav.Link>
+          <Nav.Link href="/about" className={this.getClassName()}>
+            About
+          </Nav.Link>
           <Nav.Link href="/services">Services</Nav.Link>
           <Nav.Link href="/methods">Methods</Nav.Link>
           <Nav.Link href="/wfp">WFP</Nav.Link>
@@ -33,6 +59,14 @@ const Navigation = () => {
       </Navbar.Collapse>
     </Navbar>
   );
+  }
+   componentDidMount() {
+    window.addEventListener('load', this.handlePage);
+  }
 }
 
 export default Navigation;
+
+
+
+
