@@ -1,30 +1,64 @@
 import React from "react";
+import Header from "../images/header.jpg";
+import { Jumbotron } from "react-bootstrap";
+import { css } from "glamor";
+import { colors } from "../constants/styleConstants";
+
+const jumboStyle = css({
+  backgroundImage: `url(${Header})`,
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  height: '75vh',
+  width: '100%',
+  marginBottom: '0',
+  '@media(max-width: 650px)': {
+    height: '90vh'
+  }
+});
+
+const jumboText = css({
+  textAlign: 'center',
+  color: 'white',
+  margin: 'auto',
+  maxWidth: '50%',
+  fontSize: 'calc(20px + 2vw)',
+  paddingTop: 'calc(20px + 3vw)',
+  '@media(max-width: 650px)': {
+  maxWidth: '80%'
+    }
+});
+
+const buttonStyle = css({
+  backgroundColor: colors.darkBlue,
+  padding: '12px 18px',
+  borderRadius: '8px',
+  textDecoration: 'none',
+  color: 'white',
+  ':hover': {
+    backgroundColor: colors.lightBlue,
+    textDecoration: 'none',
+    color: 'black'
+  }
+});
+
 
 function Home() {
   return (
     <div className="home">
-      <div class="container">
-        <div class="row align-items-center my-5">
-          <div class="col-lg-7">
-            <img
-              class="img-fluid rounded mb-4 mb-lg-0"
-              src="http://placehold.it/900x400"
-              alt=""
-            />
-          </div>
-          <div class="col-lg-5">
-            <h1 class="font-weight-light">Home</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-          </div>
-        </div>
-      </div>
+      <Jumbotron {...jumboStyle}>
+        <h1 {...jumboText}>
+          Residential and commercial professional window cleaning service based in Rustington, West Sussex.
+        </h1>
+        <h5 className="d-flex justify-content-center pt-3">
+          <a href="/contact" {...buttonStyle}>
+            Get a Quote!
+          </a>
+        </h5>
+      </Jumbotron>
     </div>
   );
 }
 
 export default Home;
+
+
