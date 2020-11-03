@@ -6,6 +6,7 @@ import { css, select } from "glamor";
 const navStyle = css({
   fontFamily: 'Bebas Neue',
   fontSize: 'calc(12px + 1.05vw)',
+  backgroundColor: 'white'
 });
 
 const navMargin = select('& a', {
@@ -41,13 +42,13 @@ class Navigation extends React.Component {
 
   render() {
   return (
-    <Navbar collapseOnSelect expand="lg">
+    <Navbar collapseOnSelect expand="lg" {...navStyle}>
       <Navbar.Brand href="/">
         <img src={Logo} alt="PureClean Logo" width={180} />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className={`mr-auto ${navStyle} ${navMargin}`}>
+        <Nav className={`mr-auto ${navMargin}`}>
           <Nav.Link href="/about" className={this.getClassName()}>
             About
           </Nav.Link>

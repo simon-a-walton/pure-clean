@@ -3,8 +3,14 @@ import { css, select } from "glamor";
 import { colors } from "../constants/styleConstants";
 
 const footerStyle = css({
-  backgroundColor: colors.darkBlue,
-  height: '80px'
+  backgroundColor: 'black',
+  height: '80px',
+  color: 'white'
+});
+
+const gridContainer = css({
+  display: 'grid',
+  gridTemplateColumns: 'auto auto auto'
 });
 
 const textSize = css({
@@ -16,7 +22,7 @@ const textSize = css({
 
 export const linkStyle = css({
   ':hover': {
-    color: 'black'
+    color: colors.mainBlue
   }
 });
 
@@ -28,14 +34,14 @@ const inlineList = select('& li',{
 function Footer() {
   return (
     <div>
-      <footer className={`${footerStyle}`}>
-        <div className="row text-white">
-          <div className="pl-4 col">
-            <h5 className={`m-0 ${textSize}`}>
+      <footer {...footerStyle}>
+        <div {...gridContainer}>
+          <div>
+            <h5 className={`pl-3 ${textSize}`}>
               &copy; PureClean {new Date().getFullYear()}
             </h5>
           </div>
-          <div className="col">
+          <div>
             <ul className={`list-unstyled text-center ${inlineList} ${textSize}`}>
               <li>
                 <a href="www.facebook.com" {...linkStyle}>
@@ -49,8 +55,8 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="pr-4 col">
-            <h5 className={`m-0 text-right ${textSize}`}>
+          <div>
+            <h5 className={`pr-3 text-right ${textSize}`}>
               Created by
               <span>
                 <a href="https://simonwaltondev.com/#/" target="_blank" rel="noreferrer" {...linkStyle}>

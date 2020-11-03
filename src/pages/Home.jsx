@@ -12,7 +12,6 @@ const jumboStyle = css({
   width: '100%',
   marginBottom: '0',
   '@media(max-width: 650px)': {
-    height: '90vh'
   }
 });
 
