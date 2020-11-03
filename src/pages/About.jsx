@@ -46,13 +46,24 @@ const imageSize = css({
   margin: '0 auto'
 });
 
+const bottomContainer = css({
+  display: 'grid',
+  gridTemplateColumns: '15% 85%',
+  padding: '30px',
+  '@media(max-width: 992px)': {
+    display: 'block'
+  }
+});
+
 
 const About = () => {
   return (
     <div className="about">
-      <h2 {...titleStyle}>
-        Welcome to PureClean
-      </h2>
+      <div  {...titleStyle}>
+        <h2>
+          Welcome to PureClean
+        </h2>
+      </div>
       <AboutComponent
         bgColor={colors.mainBlue}
         color='black'
@@ -147,6 +158,15 @@ const About = () => {
             </p>
         </div>
       </AboutComponent>
+      <div {...titleStyle} {...bottomContainer}>
+        <div>
+          <i className={`fas fa-clipboard-check ${css({fontSize: 'calc(40px + 2vw)', color: colors.darkBlue, '@media(max-width: 992px)':{paddingBottom:'24px'}})}`}/>
+        </div>
+        <p {...css({margin: 'auto 0'})}>
+          At PURECLEAN all are highly experienced and carry full public liability
+          insurance and all work is carried out to the strictest of health and safety requirements.
+        </p>
+      </div>
     </div>
   );
 }
