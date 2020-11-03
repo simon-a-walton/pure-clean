@@ -3,7 +3,7 @@ import { css, select } from "glamor";
 import { colors } from "../constants/styleConstants";
 
 const footerStyle = css({
-  backgroundColor: colors.darkBlue,
+  backgroundColor: 'black',
   height: '80px',
   color: 'white'
 });
@@ -22,7 +22,7 @@ const textSize = css({
 
 export const linkStyle = css({
   ':hover': {
-    color: 'black'
+    color: colors.mainBlue
   }
 });
 
