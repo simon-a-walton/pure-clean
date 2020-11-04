@@ -1,30 +1,59 @@
 import React from "react";
+import { Tabs, Tab } from "react-bootstrap";
+import { css } from "glamor";
+import { colors } from "../constants/styleConstants";
 
-function Services() {
-  return (
-    <div className="home">
-      <div class="container">
-        <div class="row align-items-center my-5">
-          <div class="col-lg-7">
-            <img
-              class="img-fluid rounded mb-4 mb-lg-0"
-              src="http://placehold.it/900x400"
-              alt=""
-            />
-          </div>
-          <div class="col-lg-5">
-            <h1 class="font-weight-light">Services</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-          </div>
-        </div>
-      </div>
+const tabStyle = css({
+  backgroundColor: colors.lightBlue,
+  padding: '8px',
+  '& a': {
+    padding: '16px auto',
+    margin: '0 auto',
+    borderRadius: '4px'
+  },
+  '& .nav-link.active': {
+    color: colors.darkBlue,
+    backgroundColor: 'white',
+    borderColor: colors.lightBlue
+  },
+
+    borderBottom: 'none',
+  '& a:hover': {
+    color: colors.darkBlue
+  },
+  '@media(max-width: 700px)': {
+    display: 'block',
+    padding: '0',
+    '& a': {
+      padding: '8px',
+      margin: 0
+    }
+  }
+});
+
+const Services = () => {
+  return(
+    <div {...css({backgroundColor: colors.mainBlue})}>
+    <Tabs defaultActiveKey="softfit" id="services-tab" {...tabStyle}>
+      <Tab eventKey="softfit" title="Softfit & Fascia  Cleaning">
+        <p>foo</p>
+      </Tab>
+      <Tab eventKey="gutter" title="Gutter cleaning">
+        <p>foo</p>
+      </Tab>
+      <Tab eventKey="solar" title="Solar Panels">
+        <p>foo</p>
+      </Tab>
+      <Tab eventKey="cladding" title="Cladding Cleaning">
+        <p>foo</p>
+      </Tab>
+      <Tab eventKey="conservatory" title="Conservatory Roof Cleaning">
+        <p>foo</p>
+      </Tab>
+    </Tabs>
     </div>
   );
 }
 
 export default Services;
+
