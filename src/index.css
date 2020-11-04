@@ -12,12 +12,12 @@ code {
     monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, nav  {
   font-family: 'Bebas Neue';
   margin-bottom: 0;
 }
 
-p, li, form {
+p, li, form, q {
   font-family: "Lato";
 }
 
