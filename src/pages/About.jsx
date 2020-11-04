@@ -61,7 +61,7 @@ const About = () => {
     <div className="about">
       <div  {...titleStyle}>
         <h2>
-          Welcome to PureClean
+          <span {...css({ borderBottom: `2px solid ${colors.green}`})}>Welcome to PureClean</span>
         </h2>
       </div>
       <AboutComponent
