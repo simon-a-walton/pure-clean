@@ -74,7 +74,7 @@ const Services = () => {
           <ConservatoryTab />
         </Tab>
       </Tabs>
-      <div {...css({backgroundColor:colors.grey, display:'flex', justifyContent: 'center',  padding: '16px', borderTop: `2px solid ${colors.green}`})}>
+      <div {...css({backgroundColor:colors.lightBlue, display:'flex', justifyContent: 'center',  padding: '16px'})}>
          <ul {...checkList}>
             <li>Professional and reliable service</li>
             <li>Fully insured</li>
