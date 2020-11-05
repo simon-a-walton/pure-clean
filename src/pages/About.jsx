@@ -71,7 +71,7 @@ const About = () => {
           <span {...bottomBorder}>Welcome to PureClean</span>
         </h2>
         <br />
-         <p>
+          <p>
             We are a residential and commercial professional window cleaning service based in Rustington, West Sussex.
           </p>
       </div>
@@ -79,7 +79,7 @@ const About = () => {
         bgColor='white'
         color='black'
       >
-         <div {...textContainer}>
+        <div {...textContainer}>
           <h4 {...headingStyle}>
             <span {...bottomBorder}>WE OFFER</span>
           </h4>
@@ -111,23 +111,23 @@ const About = () => {
         color='white'
       >
       <div {...textContainer}>
-          <h4 {...headingStyle}>
-            <span {...bottomBorder}>OUR EXPERIENCE</span>
-          </h4>
+        <h4 {...headingStyle}>
+          <span {...bottomBorder}>OUR EXPERIENCE</span>
+        </h4>
+        <p>
+          We have great experience in a wide range of exterior cleaning, we tackle: - All exterior and interior windows
+        </p>
+          <ul className="p-3">
+            <li>Conservatory roof cleaning</li>
+            <li>Gutter clearing / cleaning</li>
+            <li>Solar panel cleaning</li>
+            <li>Soffit and fascia cleaning</li>
+            <li>Cladding clean</li>
+          </ul>
           <p>
-            We have great experience in a wide range of exterior cleaning, we tackle: - All exterior and interior windows
+            All with incredible results, often using a combination of pure water and specialist cleaning solutions
+            to get even the dirtiest of surfaces sparkling again.
           </p>
-            <ul className="p-3">
-              <li>Conservatory roof cleaning</li>
-              <li>Gutter clearing / cleaning</li>
-              <li>Solar panel cleaning</li>
-              <li>Soffit and fascia cleaning</li>
-              <li>Cladding clean</li>
-            </ul>
-            <p>
-              All with incredible results, often using a combination of pure water and specialist cleaning solutions
-              to get even the dirtiest of surfaces sparkling again.
-            </p>
         </div>
         <div {...imageContainer}>
           <img
@@ -140,7 +140,9 @@ const About = () => {
               border: '4px solid white'
               })}
               alt="PureClean Paul Batty" />
-         <h4>Paul Batty</h4>
+          <h4>
+            Paul Batty
+          </h4>
         </div>
       </AboutComponent>
       <AboutComponent
@@ -148,30 +150,28 @@ const About = () => {
         color='black'
       >
         <div>
-        <h4 {...headingStyle}>
+          <h4 {...headingStyle}>
             <span {...bottomBorder}>OUR PROMISE</span>
           </h4>
           <div {...textContainer} {...bottomContainer}>
-        <div>
-          <i className={`fas fa-clipboard-check ${css({fontSize: 'calc(40px + 2vw)', paddingBottom: '16px', color: colors.darkBlue, '@media(max-width: 992px)':{paddingBottom:'24px'}})}`}/>
-        </div>
-        <p {...css({margin: 'auto 0'})}>
-          At PURECLEAN all are highly experienced and carry full public liability
-          insurance and all work is carried out to the strictest of health and safety requirements.
-        </p>
-      </div>
-
+            <div>
+              <i className={`fas fa-clipboard-check ${css({fontSize: 'calc(40px + 2vw)', paddingBottom: '16px', color: colors.darkBlue, '@media(max-width: 992px)':{paddingBottom:'24px'}})}`}/>
+            </div>
+              <p {...css({margin: 'auto 0'})}>
+                At PURECLEAN all are highly experienced and carry full public liability
+                insurance and all work is carried out to the strictest of health and safety requirements.
+              </p>
+            </div>
           </div>
-
-       <div {...css({textAlign: 'center'})}>
-         <ul {...listStyle}>
+          <div {...css({textAlign: 'center'})}>
+            <ul {...listStyle}>
               <li>Fully insured </li>
               <li>Professional and reliable </li>
               <li>Regular or one off cleans </li>
               <li>Water fed pole system </li>
               <li>Traditional </li>
             </ul>
-            </div>
+          </div>
         </AboutComponent>
     </div>
   );
