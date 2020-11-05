@@ -2,7 +2,6 @@ import React from "react";
 import { css } from "glamor";
 import { colors } from "../constants/styleConstants";
 import { bottomBorder } from "../constants/styleRules";
-import Van from "../images/van.jpeg";
 import Cleaner from "../images/cleaner.jpg";
 import Paul from "../images/Paul.jpg";
 import AboutComponent from "../components/AboutComponent";
@@ -10,14 +9,17 @@ import Check from "../images/check.svg";
 
 const titleStyle = css({
   textAlign: 'center',
-  backgroundColor: colors.darkBlue,
+  background: `linear-gradient(45deg, ${colors.darkBlue}, ${colors.mainBlue})`,
   color: 'white',
   padding: '24px'
 });
 
 const imageContainer = css({
   margin: 'auto',
-  textAlign: 'center'
+  textAlign: 'center',
+   '@media(max-width: 992px)': {
+    margin: '40px auto'
+  }
 });
 
 const textContainer = css({
@@ -55,17 +57,23 @@ const imageSize = css({
 });
 
 const bottomContainer = css({
+  margin: 'auto',
+  background: colors.darkBlue,
+  height: '270px',
+  maxWidth: '270px',
+  borderRadius: '50%',
   padding: '30px',
   textAlign: 'center',
   '@media(max-width: 992px)': {
-    display: 'block'
+    display: 'block',
+    margin: '20px auto'
   }
 });
 
 
 const About = () => {
   return (
-    <div className="about">
+    <div>
       <div  {...titleStyle}>
         <h2>
           <span {...bottomBorder}>Welcome to PureClean</span>
@@ -107,8 +115,8 @@ const About = () => {
         </div>
       </AboutComponent>
       <AboutComponent
-        bgColor={colors.darkBlue}
         color='white'
+        bgColor='linear-gradient(45deg, #0171AD, #5FC7FF)'
       >
       <div {...textContainer}>
         <h4 {...headingStyle}>
@@ -137,7 +145,7 @@ const About = () => {
               width: '250px',
               borderRadius: '50%',
               marginBottom: '30px',
-              border: '4px solid white'
+              border: `2px solid ${colors.green}`
               })}
               alt="PureClean Paul Batty" />
           <h4>
@@ -149,30 +157,30 @@ const About = () => {
         bgColor='white'
         color='black'
       >
-        <div>
+        <div {...css({'@media(max-width: 992px)':{paddingBottom:'24px'}})}>
           <h4 {...headingStyle}>
             <span {...bottomBorder}>OUR PROMISE</span>
           </h4>
-          <div {...textContainer} {...bottomContainer}>
+          <div {...bottomContainer}>
             <div>
-              <i className={`fas fa-clipboard-check ${css({fontSize: 'calc(40px + 2vw)', paddingBottom: '16px', color: colors.darkBlue, '@media(max-width: 992px)':{paddingBottom:'24px'}})}`}/>
+              <i className={`fas fa-clipboard-check ${css({fontSize: 'calc(30px + 1vw)', paddingBottom: '16px', color: 'white', '@media(max-width: 992px)':{paddingBottom:'24px'}})}`}/>
             </div>
-              <p {...css({margin: 'auto 0'})}>
+              <p {...css({margin: 'auto 0', color: 'white'})}>
                 At PURECLEAN all are highly experienced and carry full public liability
                 insurance and all work is carried out to the strictest of health and safety requirements.
               </p>
-            </div>
           </div>
-          <div {...css({textAlign: 'center'})}>
-            <ul {...listStyle}>
-              <li>Fully insured </li>
-              <li>Professional and reliable </li>
-              <li>Regular or one off cleans </li>
-              <li>Water fed pole system </li>
-              <li>Traditional </li>
-            </ul>
-          </div>
-        </AboutComponent>
+        </div>
+        <div {...css({textAlign: 'center', marginTop: '50px','@media(max-width: 992px)':{padding:'24px 0', marginTop: '0'}})}>
+          <ul {...listStyle}>
+            <li>Fully insured </li>
+            <li>Professional and reliable </li>
+            <li>Regular or one off cleans </li>
+            <li>Water fed pole system </li>
+            <li>Traditional </li>
+          </ul>
+        </div>
+      </AboutComponent>
     </div>
   );
 }
