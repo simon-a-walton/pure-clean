@@ -18,19 +18,21 @@ const SoftfitTab = () => {
   return (
     <TabLayout tabTitle={tabTitles.softfit}>
       <div {...gridItemContainer}>
-        <h4>
+        <h5>
           THE FASCIA
-        </h4>
+        </h5>
         <p>
           Your house fascias sit vertically just underneath the edge of the roof.
         </p>
-        <h4>
+        <br />
+        <h5>
           THE SOFTFITS
-        </h4>
+        </h5>
         <p>
           Your soffits sit horizontal to the ground and is the underboard of the fascia,
           usually ventilated to reduce condensation building up in your roof which could cause timbers to rot.
         </p>
+        <br />
         <p>
           Green algae can damage your soffits and fascias or any UPVC plastic and could possibly cause permanent damage.
           By having your soffits and fascias cleaned at least once per year this will greatly help in keeping them

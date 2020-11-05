@@ -28,9 +28,9 @@ class TabLayout extends React.PureComponent {
   render() {
     return (
       <div {...tabContainer}>
-        <h2 {...css({marginBottom: '24px', '@media(max-width: 992px)': {textAlign: 'center', marginBottom: '16px'}})}>
+        <h4 {...css({marginBottom: '24px', '@media(max-width: 992px)': {textAlign: 'center', marginBottom: '16px'}})}>
           <span {...bottomBorder}>{this.props.tabTitle}</span>
-        </h2>
+        </h4>
         <section {...gridContainer}>
           {this.props.children}
         </section>
