@@ -12,7 +12,7 @@ import Check from "../images/check.svg";
 
 const tabStyle = css({
   backgroundColor: colors.darkBlue,
-  padding: '8px',
+  padding: '16px',
   color: 'white',
   '& a': {
     padding: '16px auto',
@@ -28,9 +28,9 @@ const tabStyle = css({
   '& a:hover': {
     color: 'white'
   },
-  '@media(max-width: 700px)': {
+  '@media(max-width: 800px)': {
     display: 'block',
-    padding: '0',
+    padding: '8px 0',
     '& a': {
       padding: '8px',
       margin: 0
@@ -40,7 +40,9 @@ const tabStyle = css({
 
 const checkList = css({
   display: 'inline-block',
+  lineHeight: '60px',
   '& li': {
+    paddingTop: '16px',
     fontFamily: 'Bebas Neue',
     listStyleImage: `url(${Check})`,
     float: 'left',
@@ -49,7 +51,8 @@ const checkList = css({
   '@media(max-width: 992px)': {
     display: 'block',
     '& li': {
-      float: 'none'
+      float: 'none',
+      lineHeight: '16px'
     }
   }
 });
