@@ -2,16 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
 import { css } from "glamor";
-
-const gridContainer = css({
-  display: 'grid',
-  gridTemplateColumns: '50% 50%',
-  padding: '100px',
-  '@media(max-width: 992px)': {
-    display: 'block',
-    padding: '40px'
-  }
-});
+import { gridContainer } from "../constants/styleRules";
 
 class AboutComponent extends React.PureComponent {
   static propsTypes = {
@@ -23,7 +14,7 @@ class AboutComponent extends React.PureComponent {
   render() {
     return (
       <Fade>
-        <section {...css({backgroundColor: this.props.bgColor, color: this.props.color})} >
+        <section {...css({background: this.props.bgColor, color: this.props.color})} >
          <div {...gridContainer}>
           {this.props.children}
         </div>
