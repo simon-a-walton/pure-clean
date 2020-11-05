@@ -1,15 +1,10 @@
 import React from "react";
 import { css } from "glamor";
 import { colors } from "../constants/styleConstants";
-import { buttonStyle } from "../constants/styleRules";
+import { buttonStyle, bottomBorder } from "../constants/styleRules";
 
 const formContainer = css({
-  backgroundColor: colors.darkBlue,
-  color: 'white',
-  height: '100%',
-  padding: '30px',
-  margin: '0 16px',
-  borderRadius: '8px'
+  color: 'white'
 });
 
 const inputStyle = css({
@@ -31,21 +26,26 @@ export default class ContactForm extends React.Component {
   render() {
     const { status } = this.state;
     return (
-      <form
-        onSubmit={this.submitForm}
-        action="https://formspree.io/f/mzbkgjnk"
-        method="POST"
-        {...formContainer}
-      >
-        <label>Name</label><br />
-        <input type="text" name="name" {...inputStyle} required/><br /><br />
-        <label>Email</label><br />
-        <input type="email" name="email" {...inputStyle} required/><br /><br />
-        <label>Message</label><br />
-        <textarea type="text" name="message" rows="4" {...inputStyle}></textarea><br /><br />
-        {status === "SUCCESS" ? <p>Thanks!</p> : <button {...buttonStyle}><h5>Submit</h5></button>}
-        {status === "ERROR" && <p>Ooops! There was an error.</p>}
-      </form>
+      <div>
+        <form
+          onSubmit={this.submitForm}
+          action="https://formspree.io/f/mzbkgjnk"
+          method="POST"
+          {...formContainer}
+        >
+          <h4 {...css({paddingBottom: '24px', '@media(max-width: 992px)': {textAlign: 'center'}})}>
+            <span {...bottomBorder}>GET IN TOUCH</span>
+          </h4>
+          <label>Name</label><br />
+          <input type="text" name="name" {...inputStyle} required/><br /><br />
+          <label>Email</label><br />
+          <input type="email" name="email" {...inputStyle} required/><br /><br />
+          <label>Message</label><br />
+          <textarea type="text" name="message" rows="4" {...inputStyle}></textarea><br /><br />
+          {status === "SUCCESS" ? <p>Thanks!</p> : <button {...buttonStyle}><h5>Submit</h5></button>}
+          {status === "ERROR" && <p>Ooops! There was an error.</p>}
+        </form>
+      </div>
     );
   }
 
