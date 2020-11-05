@@ -1,20 +1,25 @@
 import React from "react";
 import { css } from "glamor";
 import { colors } from "../constants/styleConstants";
-import Van from "../images/van.jpeg";
+import { bottomBorder } from "../constants/styleRules";
 import Cleaner from "../images/cleaner.jpg";
 import Paul from "../images/Paul.jpg";
 import AboutComponent from "../components/AboutComponent";
+import Check from "../images/check.svg";
 
 const titleStyle = css({
   textAlign: 'center',
-  backgroundColor: colors.lightBlue,
-  padding: '16px 24px'
+  background: `linear-gradient(45deg, ${colors.darkBlue}, ${colors.mainBlue})`,
+  color: 'white',
+  padding: '24px'
 });
 
 const imageContainer = css({
-  margin: '20px auto',
-  textAlign: 'center'
+  margin: 'auto',
+  textAlign: 'center',
+   '@media(max-width: 992px)': {
+    margin: '40px auto'
+  }
 });
 
 const textContainer = css({
@@ -28,16 +33,21 @@ const headingStyle = css({
 });
 
 const listStyle = css({
-  textAlign: 'center',
+  listStylePosition: 'inside',
   margin:0,
   padding:0,
-  paddingTop: '65px',
-  height: '250px',
-  minWidth: '250px',
-  backgroundColor: 'white',
+  paddingTop: '60px',
+  height: '270px',
+  minWidth: '270px',
+  backgroundColor: colors.lightBlue,
   borderRadius: '50%',
   display: 'inline-block',
-  '& li': {listStyleType: 'none'}
+  '& li': {
+    listStyleImage: `url(${Check})`,
+    textAlign: 'center',
+    fontFamily: 'Bebas Neue',
+    fontSize: '1.25em'
+  },
 });
 
 const imageSize = css({
@@ -47,56 +57,39 @@ const imageSize = css({
 });
 
 const bottomContainer = css({
-  display: 'grid',
-  gridTemplateColumns: '15% 85%',
+  margin: 'auto',
+  background: colors.darkBlue,
+  height: '270px',
+  maxWidth: '270px',
+  borderRadius: '50%',
   padding: '30px',
+  textAlign: 'center',
   '@media(max-width: 992px)': {
-    display: 'block'
+    display: 'block',
+    margin: '20px auto'
   }
 });
 
 
 const About = () => {
   return (
-    <div className="about">
+    <div>
       <div  {...titleStyle}>
         <h2>
-          <span {...css({ borderBottom: `2px solid ${colors.green}`})}>Welcome to PureClean</span>
+          <span {...bottomBorder}>Welcome to PureClean</span>
         </h2>
+        <br />
+          <p>
+            We are a residential and commercial professional window cleaning service based in Rustington, West Sussex.
+          </p>
       </div>
       <AboutComponent
-        bgColor={colors.mainBlue}
-        color='black'
-      >
-        <div {...imageContainer}>
-          <img
-            src={Van}
-            {...imageSize}
-            alt="PureClean Van"
-          />
-        </div>
-        <div {...textContainer}>
-          <h4 {...headingStyle}>
-            We are a residential and commercial professional window cleaning service based in Rustington, West Sussex.
-          </h4>
-          <div className="text-center">
-            <ul {...listStyle}>
-              <li>✔️ Fully insured </li>
-              <li>✔️ Professional and reliable </li>
-              <li>✔️ Regular or one off cleans </li>
-              <li>✔️ Water fed pole system </li>
-              <li>✔️ Traditional </li>
-            </ul>
-          </div>
-        </div>
-      </AboutComponent>
-      <AboutComponent
-        bgColor={colors.grey}
+        bgColor='white'
         color='black'
       >
         <div {...textContainer}>
           <h4 {...headingStyle}>
-            WE OFFER
+            <span {...bottomBorder}>WE OFFER</span>
           </h4>
           <p>
             Traditional exterior and interior window cleaning as well as the latest water fed pole system.
@@ -122,9 +115,28 @@ const About = () => {
         </div>
       </AboutComponent>
       <AboutComponent
-        bgColor={colors.darkBlue}
         color='white'
+        bgColor='linear-gradient(45deg, #0171AD, #5FC7FF)'
       >
+      <div {...textContainer}>
+        <h4 {...headingStyle}>
+          <span {...bottomBorder}>OUR EXPERIENCE</span>
+        </h4>
+        <p>
+          We have great experience in a wide range of exterior cleaning, we tackle: - All exterior and interior windows
+        </p>
+          <ul className="p-3">
+            <li>Conservatory roof cleaning</li>
+            <li>Gutter clearing / cleaning</li>
+            <li>Solar panel cleaning</li>
+            <li>Soffit and fascia cleaning</li>
+            <li>Cladding clean</li>
+          </ul>
+          <p>
+            All with incredible results, often using a combination of pure water and specialist cleaning solutions
+            to get even the dirtiest of surfaces sparkling again.
+          </p>
+        </div>
         <div {...imageContainer}>
           <img
             src={Paul}
@@ -133,40 +145,42 @@ const About = () => {
               width: '250px',
               borderRadius: '50%',
               marginBottom: '30px',
-              border: '4px solid white'
+              border: `2px solid ${colors.green}`
               })}
               alt="PureClean Paul Batty" />
-         <h2>Paul Batty</h2>
-        </div>
-        <div {...textContainer}>
-          <h4 {...headingStyle}>
-            OUR EXPERIENCE
+          <h4>
+            Paul Batty
           </h4>
-          <p>
-            We have great experience in a wide range of exterior cleaning, we tackle: - All exterior and interior windows
-          </p>
-            <ul className="p-3">
-              <li>Conservatory roof cleaning</li>
-              <li>Gutter clearing / cleaning</li>
-              <li>Solar panel cleaning</li>
-              <li>Soffit and fascia cleaning</li>
-              <li>Cladding clean</li>
-            </ul>
-            <p>
-              All with incredible results, often using a combination of pure water and specialist cleaning solutions
-              to get even the dirtiest of surfaces sparkling again.
-            </p>
         </div>
       </AboutComponent>
-      <div {...titleStyle} {...bottomContainer}>
-        <div>
-          <i className={`fas fa-clipboard-check ${css({fontSize: 'calc(40px + 2vw)', color: colors.darkBlue, '@media(max-width: 992px)':{paddingBottom:'24px'}})}`}/>
+      <AboutComponent
+        bgColor='white'
+        color='black'
+      >
+        <div {...css({'@media(max-width: 992px)':{paddingBottom:'24px'}})}>
+          <h4 {...headingStyle}>
+            <span {...bottomBorder}>OUR PROMISE</span>
+          </h4>
+          <div {...bottomContainer}>
+            <div>
+              <i className={`fas fa-clipboard-check ${css({fontSize: 'calc(30px + 1vw)', paddingBottom: '16px', color: 'white', '@media(max-width: 992px)':{paddingBottom:'24px'}})}`}/>
+            </div>
+              <p {...css({margin: 'auto 0', color: 'white'})}>
+                At PURECLEAN all are highly experienced and carry full public liability
+                insurance and all work is carried out to the strictest of health and safety requirements.
+              </p>
+          </div>
         </div>
-        <p {...css({margin: 'auto 0'})}>
-          At PURECLEAN all are highly experienced and carry full public liability
-          insurance and all work is carried out to the strictest of health and safety requirements.
-        </p>
-      </div>
+        <div {...css({textAlign: 'center', marginTop: '50px','@media(max-width: 992px)':{padding:'24px 0', marginTop: '0'}})}>
+          <ul {...listStyle}>
+            <li>Fully insured </li>
+            <li>Professional and reliable </li>
+            <li>Regular or one off cleans </li>
+            <li>Water fed pole system </li>
+            <li>Traditional </li>
+          </ul>
+        </div>
+      </AboutComponent>
     </div>
   );
 }

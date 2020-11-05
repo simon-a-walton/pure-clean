@@ -1,6 +1,16 @@
 import { css } from "glamor";
+import { colors } from "../constants/styleConstants";
 import Exclamation from "../images/exclamation.svg";
 
+export const gridContainer = css({
+  display: 'grid',
+  gridTemplateColumns: '50% 50%',
+  padding: '100px',
+  '@media(max-width: 992px)': {
+    display: 'block',
+    padding: '40px'
+  }
+});
 
 export const gridItemContainer = css({
   maxWidth: '500px',
@@ -14,5 +24,18 @@ export const warningList = css({
   listStyleImage: `url(${Exclamation})`
 });
 
+export const bottomBorder = css({
+  borderBottom: `2px solid ${colors.green}`
+});
 
-
+export const buttonStyle = css({
+  backgroundColor: colors.darkBlue,
+  color: 'white',
+  border: `2px solid ${colors.green}`,
+  borderRadius: '8px',
+  padding: '8px 16px',
+  '&:hover': {
+    backgroundColor: 'black',
+    color: 'white'
+  }
+});

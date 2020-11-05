@@ -1,7 +1,7 @@
 import React from "react";
 import { css } from "glamor";
 import PropTypes from 'prop-types';
-import { colors } from "../constants/styleConstants";
+import { bottomBorder } from "../constants/styleRules";
 
 const tabContainer = css({
   backgroundColor: 'white',
@@ -28,9 +28,9 @@ class TabLayout extends React.PureComponent {
   render() {
     return (
       <div {...tabContainer}>
-        <h2 {...css({marginBottom: '24px', '@media(max-width: 992px)': {textAlign: 'center', marginBottom: '16px'}})}>
-          <span {...css({borderBottom: `2px solid ${colors.green}`})}>{this.props.tabTitle}</span>
-        </h2>
+        <h4 {...css({marginBottom: '24px', '@media(max-width: 992px)': {textAlign: 'center', marginBottom: '16px'}})}>
+          <span {...bottomBorder}>{this.props.tabTitle}</span>
+        </h4>
         <section {...gridContainer}>
           {this.props.children}
         </section>

@@ -3,6 +3,7 @@ import Header from "../images/header.jpg";
 import { Jumbotron } from "react-bootstrap";
 import { css } from "glamor";
 import { colors } from "../constants/styleConstants";
+import { buttonStyle } from "../constants/styleRules";
 
 const jumboStyle = css({
   backgroundImage: `url(${Header})`,
@@ -12,6 +13,7 @@ const jumboStyle = css({
   width: '100%',
   marginBottom: '0',
   '@media(max-width: 650px)': {
+
   }
 });
 
@@ -26,20 +28,6 @@ const jumboText = css({
   maxWidth: '80%'
     }
 });
-
-const buttonStyle = css({
-  backgroundColor: colors.darkBlue,
-  padding: '12px 18px',
-  borderRadius: '8px',
-  textDecoration: 'none',
-  color: 'white',
-  ':hover': {
-    backgroundColor: colors.lightBlue,
-    textDecoration: 'none',
-    color: 'black'
-  }
-});
-
 
 function Home() {
   return (

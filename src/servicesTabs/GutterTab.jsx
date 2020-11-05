@@ -13,17 +13,19 @@ const GutterTab = () => {
           A blocked gutter can cause serious water damage to your property which can then lead to costly repair bills.
           We recommend getting your gutters cleaned at least once a year
         </p>
+        <br />
         <h5>
           If gutters are not cleared:
         </h5>
-          <ul {...warningList}>
-            <li>They can sag due to weight build up</li>
-            <li>Mould and damp against/ or in your property due to the build up of leaves,
-            moss and other debris and obstructions clogging up your gutters</li>
-            <li>Can cause rot to soffits and fascias</li>
-            <li>Insect infestation</li>
-            <li>Can cause cracks to the walls</li>
-          </ul>
+        <br />
+        <ul {...warningList}>
+          <li>They can sag due to weight build up</li>
+          <li>Mould and damp against/ or in your property due to the build up of leaves,
+          moss and other debris and obstructions clogging up your gutters</li>
+          <li>Can cause rot to soffits and fascias</li>
+          <li>Insect infestation</li>
+          <li>Can cause cracks to the walls</li>
+        </ul>
       </div>
       <div {...gridItemContainer}>
         <img
