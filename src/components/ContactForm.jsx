@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "glamor";
 import { colors } from "../constants/styleConstants";
+import { buttonStyle } from "../constants/styleRules";
 
 const formContainer = css({
   backgroundColor: colors.darkBlue,
@@ -15,18 +16,6 @@ const inputStyle = css({
   width: '100%',
   border: '1px solid white',
   borderRadius: '8px'
-});
-
-const buttonStyle = css({
-  backgroundColor: colors.darkBlue,
-  color: 'white',
-  border: `2px solid ${colors.green}`,
-  borderRadius: '8px',
-  padding: '8px 16px',
-  '&:hover': {
-    backgroundColor: 'black',
-    color: 'white'
-  }
 });
 
 
