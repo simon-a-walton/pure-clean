@@ -1,4 +1,5 @@
 import { css } from "glamor";
+import { colors } from "../constants/styleConstants";
 import Exclamation from "../images/exclamation.svg";
 
 
@@ -14,5 +15,6 @@ export const warningList = css({
   listStyleImage: `url(${Exclamation})`
 });
 
-
-
+export const bottomBorder = css({
+  borderBottom: `2px solid ${colors.green}`
+});
