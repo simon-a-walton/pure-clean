@@ -2,11 +2,12 @@ import React from "react";
 import { css } from "glamor";
 import { colors } from "../constants/styleConstants";
 import ContactForm from "../components/ContactForm";
+import { bottomBorder } from "../constants/styleRules";
 
 const gridContainer = css({
   display: 'grid',
   gridTemplateColumns: '60% 40%',
-  padding: '100px',
+  padding: '40px 100px',
   '@media(max-width: 992px)': {
     display: 'block',
     padding: '40px',
@@ -18,12 +19,16 @@ const gridContainer = css({
 
 const Contact = () => {
   return (
-    <div className="contact" {...css({backgroundColor: colors.lightBlue})}>
+    <div {...css({backgroundColor: colors.darkBlue, color: 'white'})}>
+
       <div {...gridContainer}>
         <div>
+          <h4 >
+        <span {...bottomBorder}>GET IN TOUCH</span>
+      </h4>
           <ContactForm />
         </div>
-        <div {...css({margin: '0 auto'})}>
+        <div {...css({margin: 'auto', textAlign: 'center'})}>
           <iframe
             maxWidth="100%"
             height="300"
@@ -36,7 +41,7 @@ const Contact = () => {
             {...css({border: '4px solid white'})}
           >
           </iframe>
-          <div {...css({backgroundColor: 'white', borderRadius: '8px', padding: '16px', maxWidth: '300px', margin: '0 auto'})}>
+          <div {...css({padding: '16px', margin: '0 auto', textAlign: 'left'})}>
             <p><i className="fas fa-mobile-alt" /> Paul: 07702 113360</p>
             <p><i class="fas fa-at" /> purecleanwindow@outlook.com</p>
           </div>
