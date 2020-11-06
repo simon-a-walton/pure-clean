@@ -3,17 +3,10 @@ import { css } from "glamor";
 import TabLayout from "./TabLayout";
 import { colors } from "../constants/styleConstants";
 import { tabTitles } from "../constants/tabTitles";
-import { gridItemContainer } from "../constants/styleRules.js";
+import { gridItemContainer, imgContainer, imgGridContainer } from "../constants/styleRules.js";
 import SoffitClean from "../images/soffit-clean.jpg";
 import SoffitDirty from "../images/soffit-dirty.jpg";
 import Explanation from "../images/explanation.jpg";
-
-const imgContainer = css({
-  maxWidth: '85%',
-  height: 'auto',
-  margin: '0 auto',
-  padding: '16px'
-});
 
 const SoftfitTab = () => {
   return (
@@ -51,7 +44,7 @@ const SoftfitTab = () => {
         <div {...css({backgroundColor: colors.grey, marginBottom: '16px', textAlign: 'center'})}>
           <img src={Explanation} {...imgContainer} alt="Soffit Explained" />
         </div>
-        <div {...css({backgroundColor: colors.grey, display: 'grid', gridTemplateColumns: '50% 50%', marginBottom: '16px'})}>
+        <div {...imgGridContainer}>
           <img src={SoffitDirty} {...imgContainer} alt="Dirty Soffit" />
           <img src={SoffitClean} {...imgContainer} alt="Clean Soffit" />
         </div>
