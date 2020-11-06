@@ -44,7 +44,7 @@ const Navigation = () => {
         <div
           {...rainStyle}
           {...buttonStyle}
-          {...css({'@media(max-width: 992px)': {backgroundColor:'white', color: 'black', padding: '4px', border:'none'}})}
+          {...css({'@media(max-width: 992px)': {backgroundColor:'white', color: 'black', padding: '4px', border:'none', '&:hover': {backgroundColor: 'white', color: 'black'}}})}
           onClick={() => setModalShow(true)}
         >
             <h6>
