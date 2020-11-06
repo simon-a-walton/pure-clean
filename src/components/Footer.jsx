@@ -28,10 +28,11 @@ export const linkStyle = css({
 
 const inlineList = select('& li',{
   display: 'inline',
-  padding: '0 8px'
+  padding: '0 8px',
+  listStyleType: 'none'
 });
 
-function Footer() {
+const Footer = () => {
   return (
     <div>
       <footer {...footerStyle}>
@@ -42,7 +43,7 @@ function Footer() {
             </h5>
           </div>
           <div>
-            <ul className={`list-unstyled text-center ${inlineList} ${textSize}`}>
+            <ul className={`text-center ${inlineList} ${textSize}`}>
               <li>
                 <a href="www.facebook.com" {...linkStyle}>
                   <i className="fab fa-facebook" />
