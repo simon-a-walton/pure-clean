@@ -58,5 +58,8 @@ export const imgContainer = css({
   padding: '16px',
   '@media(max-width: 992px)': {
     maxWidth: '60%'
+  },
+   '@media(max-width: 550px)': {
+    maxWidth: '100%'
   }
 });
