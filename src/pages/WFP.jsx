@@ -6,7 +6,7 @@ import WindowCleaning from "../images/window-cleaning.svg";
 
 const WFP = () => {
   return (
-    <div className="home" {...css({backgroundImage: `linear-gradient(45deg, ${colors.darkBlue}, ${colors.purple})`, color: 'white'})}>
+    <div className="home" {...css({backgroundImage: `linear-gradient(135deg, ${colors.darkBlue}, ${colors.green})`, color: 'white'})}>
       <div {...gridContainer}>
         <div {...gridItemContainer}>
           <h4 {...css({paddingBottom: '24px', '@media(max-width: 992px)': {textAlign: 'center'}})}>

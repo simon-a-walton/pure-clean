@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../images/header.jpg";
 import { Jumbotron } from "react-bootstrap";
 import { css } from "glamor";
-import { colors } from "../constants/styleConstants";
 import { buttonStyle } from "../constants/styleRules";
 
 const jumboStyle = css({
@@ -13,7 +12,7 @@ const jumboStyle = css({
   width: '100%',
   marginBottom: '0',
   '@media(max-width: 650px)': {
-
+    height: '80vh'
   }
 });
 

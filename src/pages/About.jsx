@@ -6,10 +6,11 @@ import Cleaner from "../images/cleaner.jpg";
 import Paul from "../images/Paul.jpg";
 import AboutComponent from "../components/AboutComponent";
 import Check from "../images/check.svg";
+import { buttonStyle } from "../constants/styleRules";
 
 const titleStyle = css({
   textAlign: 'center',
-  background: `linear-gradient(45deg, ${colors.darkBlue}, ${colors.mainBlue})`,
+  background: `linear-gradient(135deg, ${colors.darkBlue}, ${colors.mainBlue})`,
   color: 'white',
   padding: '24px'
 });
@@ -39,7 +40,8 @@ const listStyle = css({
   paddingTop: '60px',
   height: '270px',
   minWidth: '270px',
-  backgroundColor: colors.lightBlue,
+  backgroundColor: colors.darkBlue,
+  color: 'white',
   borderRadius: '50%',
   display: 'inline-block',
   '& li': {
@@ -98,7 +100,7 @@ const About = () => {
             <br />
             <br />
             Attention to detail is important to us whether it is a traditional approach or our sophisticated pure water
-            system both service’s include wiping down frames and sills making sure that the whole window is kept clean.
+            system. Both service’s include wiping down frames and sills making sure that the whole window is kept clean.
             <br />
             <br />
             Our customer’s have found us to be reliable and trustworthy and have been using us for lots of different
@@ -116,21 +118,22 @@ const About = () => {
       </AboutComponent>
       <AboutComponent
         color='white'
-        bgColor='linear-gradient(45deg, #0171AD, #5FC7FF)'
+        bgColor='linear-gradient(135deg, #0171AD, #5FC7FF)'
       >
       <div {...textContainer}>
         <h4 {...headingStyle}>
           <span {...bottomBorder}>OUR EXPERIENCE</span>
         </h4>
         <p>
-          We have great experience in a wide range of exterior cleaning, we tackle: - All exterior and interior windows
+          We have great experience in a wide range of exterior cleaning, we tackle:
         </p>
           <ul className="p-3">
+            <li>All exterior and interior windows</li>
             <li>Conservatory roof cleaning</li>
             <li>Gutter clearing / cleaning</li>
             <li>Solar panel cleaning</li>
             <li>Soffit and fascia cleaning</li>
-            <li>Cladding clean</li>
+            <li>Cladding cleaning</li>
           </ul>
           <p>
             All with incredible results, often using a combination of pure water and specialist cleaning solutions
@@ -157,19 +160,19 @@ const About = () => {
         bgColor='white'
         color='black'
       >
-        <div {...css({'@media(max-width: 992px)':{paddingBottom:'24px'}})}>
+        <div {...textContainer}>
           <h4 {...headingStyle}>
             <span {...bottomBorder}>OUR PROMISE</span>
           </h4>
-          <div {...bottomContainer}>
-            <div>
-              <i className={`fas fa-clipboard-check ${css({fontSize: 'calc(30px + 1vw)', paddingBottom: '16px', color: 'white', '@media(max-width: 992px)':{paddingBottom:'24px'}})}`}/>
-            </div>
-              <p {...css({margin: 'auto 0', color: 'white'})}>
-                At PURECLEAN all are highly experienced and carry full public liability
-                insurance and all work is carried out to the strictest of health and safety requirements.
-              </p>
-          </div>
+          <p {...css({margin: 'auto 0'})}>
+            At PURECLEAN all are highly experienced and carry full public liability
+            insurance and all work is carried out to the strictest of health and safety requirements.
+          </p>
+          <h5 {...css({padding:'40px 0', '@media(max-width: 992px)': {textAlign:'center'}})}>
+            <a href="/contact" {...buttonStyle}>
+              Get a Quote!
+            </a>
+          </h5>
         </div>
         <div {...css({textAlign: 'center', marginTop: '50px','@media(max-width: 992px)':{padding:'24px 0', marginTop: '0'}})}>
           <ul {...listStyle}>

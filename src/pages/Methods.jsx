@@ -6,7 +6,7 @@ import  Window from "../images/clean-window-glass.svg";
 
 const Methods = () => {
   return (
-    <div className="home" {...css({backgroundImage: `linear-gradient(45deg, ${colors.darkBlue}, ${colors.mainBlue})`, color: 'white'})}>
+    <div className="home" {...css({backgroundImage: `linear-gradient(135deg, ${colors.darkBlue}, ${colors.mainBlue})`, color: 'white'})}>
       <div {...gridContainer}>
         <div {...gridItemContainer}>
           <h4 {...css({paddingBottom: '24px', '@media(max-width: 992px)': {textAlign: 'center'}})}>
