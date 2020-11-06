@@ -36,6 +36,11 @@ export default class ContactForm extends React.Component {
           <h4 {...css({paddingBottom: '24px', '@media(max-width: 992px)': {textAlign: 'center'}})}>
             <span {...bottomBorder}>GET IN TOUCH</span>
           </h4>
+          <p>
+            Want to know more about our services or prices? Please fill out this form and one of
+            our friendly team will get back to you
+          </p>
+          <br />
           <label>Name</label><br />
           <input type="text" name="name" {...inputStyle} required/><br /><br />
           <label>Email</label><br />
