@@ -1,8 +1,18 @@
 import React from "react";
 import { css } from "glamor";
+import { colors } from "../constants/styleConstants";
 import TabLayout from "./TabLayout";
 import { tabTitles } from "../constants/tabTitles";
 import { gridItemContainer } from "../constants/styleRules.js";
+import ConservatoryClean from "../images/conservatory-clean.jpg";
+import ConservatoryDirty from "../images/conservatory-dirty.jpg";
+
+const imgContainer = css({
+  maxWidth: '100%',
+  height: 'auto',
+  margin: '0 auto',
+  padding: '16px'
+});
 
 const ConservatoryTab = () => {
   return (
@@ -20,11 +30,10 @@ const ConservatoryTab = () => {
         </p>
       </div>
       <div {...gridItemContainer}>
-        <img
-          class="img-fluid rounded mb-4 mb-lg-0"
-          src="http://placehold.it/900x400"
-          alt=""
-        />
+        <div {...css({backgroundColor: colors.grey, display: 'grid', gridTemplateColumns: '50% 50%', marginBottom: '16px'})}>
+          <img src={ConservatoryDirty} {...imgContainer} alt="Dirty Conservatory" />
+          <img src={ConservatoryClean} {...imgContainer} alt="Clean Conservatory" />
+        </div>
       </div>
     </TabLayout>
   );
