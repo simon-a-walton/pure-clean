@@ -40,7 +40,7 @@ const tabStyle = css({
 
 const checkList = css({
   display: 'inline-block',
-  lineHeight: '60px',
+  lineHeight: '40px',
   '& li': {
     paddingTop: '16px',
     fontFamily: 'Bebas Neue',
@@ -64,6 +64,9 @@ const Services = () => {
         <Tab eventKey="softfit" title={tabTitles.softfit}>
           <SoftfitTab />
         </Tab>
+         <Tab eventKey="conservatory" title={tabTitles.conservatory}>
+          <ConservatoryTab />
+        </Tab>
         <Tab eventKey="gutter" title={tabTitles.gutter}>
           <GutterTab />
         </Tab>
@@ -73,11 +76,8 @@ const Services = () => {
         <Tab eventKey="cladding" title={tabTitles.cladding}>
           <CladdingTab />
         </Tab>
-        <Tab eventKey="conservatory" title={tabTitles.conservatory}>
-          <ConservatoryTab />
-        </Tab>
       </Tabs>
-      <div {...css({backgroundColor:colors.lightBlue, display:'flex', justifyContent: 'center',  padding: '16px'})}>
+      <div {...css({background: colors.darkBlue, color: 'white', display:'flex', justifyContent: 'center',  padding: '16px'})}>
          <ul {...checkList}>
             <li>Professional and reliable service</li>
             <li>Fully insured</li>
