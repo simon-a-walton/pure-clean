@@ -39,3 +39,24 @@ export const buttonStyle = css({
     color: 'white'
   }
 });
+
+export const imgGridContainer = css({
+  backgroundColor: colors.grey,
+  display: 'grid',
+  gridTemplateColumns: '50% 50%',
+  marginBottom: '16px',
+  '@media(max-width: 992px)': {
+    display: 'block',
+    textAlign: 'center'
+    }
+  });
+
+export const imgContainer = css({
+  maxWidth: '85%',
+  height: 'auto',
+  margin: '0 auto',
+  padding: '16px',
+  '@media(max-width: 992px)': {
+    maxWidth: '60%'
+  }
+});
