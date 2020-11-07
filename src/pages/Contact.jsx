@@ -14,15 +14,13 @@ const Contact = () => {
         </div>
         <div {...css({margin: 'auto', textAlign: 'center', '@media(max-width: 992px)':{marginTop:'24px'}})}>
           <iframe
-            width="250"
-            height="250"
             frameborder="0"
             scrolling="no"
             marginheight="0"
             marginwidth="0"
             title="PureClean Rustington"
             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Rustington,%20England+(PureClean)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-            {...css({border: '2px solid white', borderRadius: '4px'})}
+            {...css({border: '2px solid white', borderRadius: '4px', height: '300px', '@media(max-width: 992px)': {height: '250px', width: '250px'}})}
           >
           </iframe>
           <div {...css({color: 'black', padding: '16px', backgroundColor: 'white', maxWidth:'350px', borderRadius:'4px', margin: '20px auto', '& a:hover': {color: colors.darkBlue}})}>
