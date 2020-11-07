@@ -3,7 +3,6 @@ import Logo from "../images/logo.jpg";
 import { Nav, Navbar } from "react-bootstrap";
 import { css, select } from "glamor";
 import RainModal from "../components/RainModal";
-import { Button } from 'react-bootstrap';
 import { buttonStyle } from "../constants/styleRules";
 
 const navStyle = css({
@@ -20,8 +19,13 @@ const navMargin = select('& a', {
 });
 
 const rainStyle = css({
+  pointer: 'cursor',
+  padding: '8px 0',
+  fontSize: '0.7em',
   textAlign: 'right',
-  cursor: 'pointer'
+  '@media(max-width: 992px)': {
+    textAlign: 'left'
+  }
 });
 
 const Navigation = () => {
@@ -43,13 +47,11 @@ const Navigation = () => {
         </Nav>
         <div
           {...rainStyle}
-          {...buttonStyle}
-          {...css({'@media(max-width: 992px)': {backgroundColor:'white', color: 'black', padding: '4px', border:'none', '&:hover': {backgroundColor: 'white', color: 'black'}}})}
           onClick={() => setModalShow(true)}
         >
             <h6>
-              <i className="fas fa-umbrella" />
-              &nbsp; Our Rain Guarantee
+              Rain Guarantee
+              &nbsp; <i className="fas fa-umbrella" />
             </h6>
           </div>
         <RainModal
