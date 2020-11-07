@@ -58,20 +58,6 @@ const imageSize = css({
   margin: '0 auto'
 });
 
-const bottomContainer = css({
-  margin: 'auto',
-  background: colors.darkBlue,
-  height: '270px',
-  maxWidth: '270px',
-  borderRadius: '50%',
-  padding: '30px',
-  textAlign: 'center',
-  '@media(max-width: 992px)': {
-    display: 'block',
-    margin: '20px auto'
-  }
-});
-
 
 const About = () => {
   return (
@@ -127,7 +113,7 @@ const About = () => {
         <p>
           We have great experience in a wide range of exterior cleaning, we tackle:
         </p>
-          <ul className="p-3">
+          <ul {...css({'& li': {listStyleImage: `url(${Check})`}, padding: '24px'})}>
             <li>All exterior and interior windows</li>
             <li>Conservatory roof cleaning</li>
             <li>Gutter clearing / cleaning</li>
