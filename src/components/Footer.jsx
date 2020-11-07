@@ -1,5 +1,5 @@
 import React from "react";
-import { css, select } from "glamor";
+import { css } from "glamor";
 import { colors } from "../constants/styleConstants";
 
 const footerStyle = css({
@@ -10,13 +10,13 @@ const footerStyle = css({
 
 const gridContainer = css({
   display: 'grid',
-  gridTemplateColumns: 'auto auto auto'
+  gridTemplateColumns: '40% 20% 40%'
 });
 
 const textSize = css({
   lineHeight: '60px',
 '@media(max-width: 600px)': {
-  fontSize: '10px'
+  fontSize: '14px'
   }
 });
 
@@ -26,10 +26,14 @@ export const linkStyle = css({
   }
 });
 
-const inlineList = select('& li',{
-  display: 'inline',
-  padding: '0 8px',
-  listStyleType: 'none'
+const inlineList = css({
+    margin: 0,
+    padding: 0,
+  '& li': {
+    display: 'inline',
+    padding: '0 8px',
+    listStyleType: 'none'
+  }
 });
 
 const Footer = () => {
@@ -45,12 +49,12 @@ const Footer = () => {
           <div>
             <ul className={`text-center ${inlineList} ${textSize}`}>
               <li>
-                <a href="www.facebook.com" {...linkStyle}>
+                <a href="https://www.facebook.com" target="_blank" rel="noreferrer" {...linkStyle}>
                   <i className="fab fa-facebook" />
                 </a>
               </li>
               <li>
-                <a href="www.instagram.com" {...linkStyle}>
+                <a href="https://www.instagram.com" target="_blank" rel="noreferrer" {...linkStyle}>
                   <i className="fab fa-instagram" />
                 </a>
               </li>
@@ -58,7 +62,7 @@ const Footer = () => {
           </div>
           <div>
             <h5 className={`pr-3 text-right ${textSize}`}>
-              Created by
+              <i className="fas fa-laptop-code" />
               <span>
                 <a href="https://simonwaltondev.com/#/" target="_blank" rel="noreferrer" {...linkStyle}>
                   &nbsp;
