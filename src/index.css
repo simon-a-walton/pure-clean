@@ -21,6 +21,13 @@ p, li, form, q {
   font-family: "Montserrat";
 }
 
+@media screen and (max-width: 650px) {
+  p, li, form, q {
+  font-size: 0.85em;
+  }
+}
+
+
 a {
   text-decoration: none;
   color: inherit;
