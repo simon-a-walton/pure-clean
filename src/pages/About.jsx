@@ -53,9 +53,10 @@ const listStyle = css({
 });
 
 const imageSize = css({
-  maxWidth: '70%',
-  height: 'auto',
-  margin: '0 auto'
+  height: '250px',
+              width: '250px',
+              borderRadius: '50%',
+              marginBottom: '30px'
 });
 
 
@@ -97,7 +98,6 @@ const About = () => {
           <img
             src={Cleaner}
             {...imageSize}
-            {...css({'@media(max-width: 992px)': { margin: '80px auto' }})}
             alt="PureClean Cleaning"
           />
         </div>
@@ -129,13 +129,7 @@ const About = () => {
         <div {...imageContainer}>
           <img
             src={Paul}
-            {...css({
-              height: '250px',
-              width: '250px',
-              borderRadius: '50%',
-              marginBottom: '30px',
-              border: `2px solid ${colors.green}`
-              })}
+            {...imageSize}
               alt="PureClean Paul Batty" />
           <h4>
             Paul Batty
