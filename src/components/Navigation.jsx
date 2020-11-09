@@ -3,7 +3,6 @@ import Logo from "../images/logo.jpg";
 import { Nav, Navbar } from "react-bootstrap";
 import { css, select } from "glamor";
 import RainModal from "../components/RainModal";
-import { colors } from "../constants/styleConstants";
 
 const navStyle = css({
   fontFamily: 'Bebas Neue',

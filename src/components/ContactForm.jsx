@@ -1,6 +1,5 @@
 import React from "react";
 import { css } from "glamor";
-import { colors } from "../constants/styleConstants";
 import { buttonStyle, bottomBorder } from "../constants/styleRules";
 
 const formContainer = css({
