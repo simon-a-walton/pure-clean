@@ -22,8 +22,16 @@ const ConservatoryTab = () => {
       </div>
       <div {...gridItemContainer}>
         <div {...imgGridContainer}>
-          <img src={ConservatoryDirty} {...imgContainer} alt="Dirty Conservatory" />
-          <img src={ConservatoryClean} {...imgContainer} alt="Clean Conservatory" />
+          <img
+            src={ConservatoryDirty}
+            {...imgContainer}
+            alt="Dirty Conservatory"
+          />
+          <img
+            src={ConservatoryClean}
+            {...imgContainer}
+            alt="Clean Conservatory"
+          />
         </div>
       </div>
     </TabLayout>

@@ -59,7 +59,6 @@ const imageSize = css({
   marginBottom: "30px"
 });
 
-
 const About = () => {
   return (
     <div>
