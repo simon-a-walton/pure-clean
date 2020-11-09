@@ -3,7 +3,7 @@ import Logo from "../images/logo.jpg";
 import { Nav, Navbar } from "react-bootstrap";
 import { css, select } from "glamor";
 import RainModal from "../components/RainModal";
-import { buttonStyle } from "../constants/styleRules";
+import { colors } from "../constants/styleConstants";
 
 const navStyle = css({
   fontFamily: 'Bebas Neue',
@@ -19,12 +19,11 @@ const navMargin = select('& a', {
 });
 
 const rainStyle = css({
-  pointer: 'cursor',
+  fontSize: '0.6em',
+  lineHeight: '38px',
   padding: '8px 0',
-  fontSize: '0.7em',
-  textAlign: 'right',
   '@media(max-width: 992px)': {
-    textAlign: 'left'
+    lineHeight: '20px',
   }
 });
 
@@ -44,16 +43,14 @@ const Navigation = () => {
           {pathname === "/methods" ? <Nav.Link href="/methods" className="active">Methods</Nav.Link> : <Nav.Link href="/methods">Methods</Nav.Link>}
           {pathname === "/wfp" ? <Nav.Link href="/wfp" className="active">Water Fed Pole</Nav.Link> : <Nav.Link href="/wfp">Water Fed Pole</Nav.Link>}
           {pathname === "/contact" ? <Nav.Link href="/contact" className="active">Contact Us</Nav.Link> : <Nav.Link href="/contact">Contact Us</Nav.Link>}
+          <Nav.Link
+            onClick={() => setModalShow(true)}
+            {...rainStyle}>
+              <i className="fas fa-umbrella" />
+              &nbsp; Rain Guarantee
+          </Nav.Link>
         </Nav>
-        <div
-          {...rainStyle}
-          onClick={() => setModalShow(true)}
-        >
-            <h6>
-              Rain Guarantee
-              &nbsp; <i className="fas fa-umbrella" />
-            </h6>
-          </div>
+
         <RainModal
           show={modalShow}
           onHide={() => setModalShow(false)}
