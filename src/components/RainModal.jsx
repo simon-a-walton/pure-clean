@@ -42,7 +42,14 @@ const RainModal = (props) => {
         />
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide} {...buttonStyle}>Close</Button>
+        <Button
+          onClick={props.onHide}
+          {...buttonStyle}
+        >
+          <h5>
+            Close
+          </h5>
+        </Button>
       </Modal.Footer>
     </Modal>
     </>
