@@ -30,7 +30,7 @@ const inlineList = css({
     listStyleType: "none",
     "& a:hover": {
     color: colors.mainBlue
-  }
+    }
   }
 });
 
@@ -61,7 +61,7 @@ const Footer = () => {
           <div>
             <h5 {...css({ paddingRight: "16px", textAlign: "right" })} {...textSize}>
               <i className="fas fa-laptop-code" />
-              <span>
+              <span {...css({ "& a:hover": { color: colors.mainBlue }})}>
                 <a href="https://simonwaltondev.com/#/" target="_blank" rel="noreferrer">
                   &nbsp;
                   Simon Walton
