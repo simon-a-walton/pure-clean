@@ -9,72 +9,72 @@ import Check from "../images/check.svg";
 import { buttonStyle } from "../constants/styleRules";
 
 const titleStyle = css({
-  textAlign: 'center',
+  textAlign: "center",
   background: `linear-gradient(135deg, ${colors.darkBlue}, ${colors.mainBlue})`,
-  color: 'white',
-  padding: '24px'
+  color: "white",
+  padding: "24px"
 });
 
 const imageContainer = css({
-  margin: 'auto',
-  textAlign: 'center',
-   '@media(max-width: 992px)': {
-    margin: '40px auto'
+  margin: "auto",
+  textAlign: "center",
+   "@media(max-width: 992px)": {
+    margin: "40px auto"
   }
 });
 
 const textContainer = css({
-  margin: 'auto',
-  maxWidth: '450px'
+  margin: "auto",
+  maxWidth: "450px"
 });
 
 const headingStyle = css({
-  '@media(max-width: 992px)': {paddingTop: '60px', textAlign: 'center'},
-  paddingBottom: '24px'
+  "@media(max-width: 992px)": {paddingTop: "60px", textAlign: "center"},
+  paddingBottom: "24px"
 });
 
 const listStyle = css({
-  listStylePosition: 'inside',
+  listStylePosition: "inside",
   margin:0,
   padding:0,
-  paddingTop: '60px',
-  height: '270px',
-  minWidth: '270px',
+  paddingTop: "60px",
+  height: "270px",
+  minWidth: "270px",
   backgroundColor: colors.darkBlue,
-  color: 'white',
-  borderRadius: '50%',
-  display: 'inline-block',
-  '& li': {
+  color: "white",
+  borderRadius: "50%",
+  display: "inline-block",
+  "& li": {
     listStyleImage: `url(${Check})`,
-    textAlign: 'center',
-    fontFamily: 'Bebas Neue',
-    fontSize: '1.25em'
+    textAlign: "center",
+    fontFamily: "Bebas Neue",
+    fontSize: "1.25em"
   },
 });
 
 const imageSize = css({
-  height: '250px',
-              width: '250px',
-              borderRadius: '50%',
-              marginBottom: '30px'
+  height: "250px",
+  width: "250px",
+  borderRadius: "50%",
+  marginBottom: "30px"
 });
 
 
 const About = () => {
   return (
     <div>
-      <div  {...titleStyle}>
+      <div {...titleStyle}>
         <h2>
           <span {...bottomBorder}>Welcome to PureClean</span>
         </h2>
         <br />
-          <p>
-            We are a residential and commercial professional window cleaning service based in Rustington, West Sussex.
-          </p>
+        <p>
+          We are a residential and commercial professional window cleaning service based in Rustington, West Sussex.
+        </p>
       </div>
       <AboutComponent
-        bgColor='white'
-        color='black'
+        bgColor="white"
+        color="black"
       >
         <div {...textContainer}>
           <h4 {...headingStyle}>
@@ -103,8 +103,8 @@ const About = () => {
         </div>
       </AboutComponent>
       <AboutComponent
-        color='white'
-        bgColor='linear-gradient(135deg, #0171AD, #5FC7FF)'
+        color="white"
+        bgColor="linear-gradient(135deg, #0171AD, #5FC7FF)"
       >
       <div {...textContainer}>
         <h4 {...headingStyle}>
@@ -113,7 +113,7 @@ const About = () => {
         <p>
           We have great experience in a wide range of exterior cleaning, we tackle:
         </p>
-          <ul {...css({'& li': {listStyleImage: `url(${Check})`}, padding: '24px'})}>
+          <ul {...css({ "& li": {listStyleImage: `url(${Check})` }, padding: "24px" })}>
             <li>All exterior and interior windows</li>
             <li>Conservatory roof cleaning</li>
             <li>Gutter clearing / cleaning</li>
@@ -137,24 +137,31 @@ const About = () => {
         </div>
       </AboutComponent>
       <AboutComponent
-        bgColor='white'
-        color='black'
+        bgColor="white"
+        color="black"
       >
         <div {...textContainer}>
           <h4 {...headingStyle}>
             <span {...bottomBorder}>OUR PROMISE</span>
           </h4>
-          <p {...css({margin: 'auto 0'})}>
+          <p {...css({ margin: "auto 0" })}>
             At PURECLEAN all are highly experienced and carry full public liability
             insurance and all work is carried out to the strictest of health and safety requirements.
           </p>
-          <h5 {...css({padding:'40px 0', '@media(max-width: 992px)': {textAlign:'center'}})}>
+          <h5 {...css({ padding:"40px 0", "@media(max-width: 992px)": { textAlign:"center" } })}>
             <a href="/contact" {...buttonStyle}>
               Get a Quote!
             </a>
           </h5>
         </div>
-        <div {...css({textAlign: 'center', marginTop: '50px','@media(max-width: 992px)':{padding:'24px 0', marginTop: '0'}})}>
+        <div {...css({
+          textAlign: "center",
+          marginTop: "50px",
+          "@media(max-width: 992px)":
+          { padding:"24px 0",
+          marginTop: "0"
+          }
+        })}>
           <ul {...listStyle}>
             <li>Fully insured </li>
             <li>Professional and reliable </li>

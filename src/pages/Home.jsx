@@ -6,36 +6,40 @@ import { buttonStyle } from "../constants/styleRules";
 
 const jumboStyle = css({
   backgroundImage: `url(${Header})`,
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-  height: '75vh',
-  width: '100%',
-  marginBottom: '0',
-  '@media(max-width: 650px)': {
-    height: '80vh'
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  height: "75vh",
+  width: "100%",
+  marginBottom: "0",
+  "@media(max-width: 650px)": {
+    height: "80vh"
   }
 });
 
 const jumboText = css({
-  textAlign: 'center',
-  color: 'white',
-  margin: 'auto',
-  maxWidth: '50%',
-  fontSize: 'calc(20px + 2vw)',
-  paddingTop: 'calc(20px + 3vw)',
-  '@media(max-width: 650px)': {
-  maxWidth: '80%'
+  textAlign: "center",
+  color: "white",
+  margin: "auto",
+  maxWidth: "50%",
+  fontSize: "calc(20px + 2vw)",
+  paddingTop: "calc(20px + 3vw)",
+  "@media(max-width: 650px)": {
+  maxWidth: "80%"
     }
 });
 
-function Home() {
+const Home = () => {
   return (
-    <div className="home">
+    <div>
       <Jumbotron {...jumboStyle}>
         <h1 {...jumboText}>
           Residential and commercial professional window cleaning service based in Rustington, West Sussex.
         </h1>
-        <h5 className="d-flex justify-content-center pt-3">
+        <h5 {...css({
+          display: "flex",
+          justifyContent: "center",
+          paddingTop: "16px"
+        })}>
           <a href="/contact" {...buttonStyle}>
             Get a Quote!
           </a>
