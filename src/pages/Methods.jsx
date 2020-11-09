@@ -6,10 +6,10 @@ import  Window from "../images/clean-window-glass.svg";
 
 const Methods = () => {
   return (
-    <div className="home" {...css({backgroundImage: `linear-gradient(135deg, ${colors.darkBlue}, ${colors.mainBlue})`, color: 'white'})}>
+    <div {...css({ backgroundImage: `linear-gradient(135deg, ${colors.darkBlue}, ${colors.mainBlue})`, color: "white" })}>
       <div {...gridContainer}>
         <div {...gridItemContainer}>
-          <h4 {...css({paddingBottom: '24px', '@media(max-width: 992px)': {textAlign: 'center'}})}>
+          <h4 {...css({ paddingBottom: "24px", "@media(max-width: 992px)": { textAlign: "center" } })}>
             <span {...bottomBorder}>
               Traditional methods
             </span>
@@ -30,7 +30,7 @@ const Methods = () => {
             windows that have not been cleaned in a very long time, or if you have had building work on or near your property.
           </p>
         </div>
-          <div {...gridItemContainer} {...css({textAlign:'center'})}>
+          <div {...gridItemContainer} {...css({textAlign:"center"})}>
             <img
               src={Window}
               alt="Window"

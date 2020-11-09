@@ -7,12 +7,12 @@ import Logo from "../images/logo.jpg";
 
 const Contact = () => {
   return (
-    <div {...css({backgroundImage: `linear-gradient(135deg, ${colors.darkBlue}, ${colors.mainBlue})`, color: 'white'})}>
+    <div {...css({ backgroundImage: `linear-gradient(135deg, ${colors.darkBlue}, ${colors.mainBlue})`, color: "white" })}>
       <div {...gridContainer}>
         <div>
           <ContactForm />
         </div>
-        <div {...css({margin: 'auto', textAlign: 'center', '@media(max-width: 992px)':{marginTop:'24px'}})}>
+        <div {...css({ margin: "auto", textAlign: "center", "@media(max-width: 992px)":{ marginTop:"24px" } })}>
           <iframe
             frameborder="0"
             scrolling="no"
@@ -20,16 +20,26 @@ const Contact = () => {
             marginwidth="0"
             title="PureClean Rustington"
             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Rustington,%20England+(PureClean)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-            {...css({border: '2px solid white', borderRadius: '4px', height: '300px', '@media(max-width: 992px)': {height: '250px', width: '250px'}})}
+            {...css({border: "2px solid white", borderRadius: "4px", height: "300px", "@media(max-width: 992px)": {height: "250px", width: "250px"}})}
           >
           </iframe>
-          <div {...css({color: 'black', padding: '16px', backgroundColor: 'white', maxWidth:'350px', borderRadius:'4px', margin: '20px auto', '& a:hover': {color: colors.darkBlue}})}>
+          <div {...css({
+            color: "black",
+            padding: "16px",
+            backgroundColor: "white",
+            maxWidth:"350px",
+            borderRadius:"4px",
+            margin: "20px auto",
+            "& a:hover": {
+              color: colors.darkBlue
+            }
+          })}>
             <img
               src={Logo}
               width={200}
               alt="logo"
             />
-            <div {...css({padding:'12px', textAlign:'left'})}>
+            <div {...css({ padding:"12px", textAlign:"left" })}>
               <a href="tel:07702 113360" target="_blank" rel="noreferrer">
                 <h6>
                   <i className="fas fa-mobile-alt" />

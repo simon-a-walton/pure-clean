@@ -6,10 +6,10 @@ import WindowCleaning from "../images/window-cleaning.svg";
 
 const WFP = () => {
   return (
-    <div className="home" {...css({backgroundImage: `linear-gradient(135deg, ${colors.darkBlue}, ${colors.green})`, color: 'white'})}>
+    <div {...css({ backgroundImage: `linear-gradient(135deg, ${colors.darkBlue}, ${colors.green})`, color: "white" })}>
       <div {...gridContainer}>
         <div {...gridItemContainer}>
-          <h4 {...css({paddingBottom: '24px', '@media(max-width: 992px)': {textAlign: 'center'}})}>
+          <h4 {...css({ paddingBottom: "24px", "@media(max-width: 992px)": { textAlign: "center" } })}>
             <span {...bottomBorder}>
               Water fed pole system
             </span>
@@ -30,7 +30,7 @@ const WFP = () => {
             windows that have not been cleaned in a very long time, or if you have had building work on or near your property.
           </p>
         </div>
-         <div {...gridItemContainer} {...css({textAlign:'center'})}>
+         <div {...gridItemContainer} {...css({ textAlign:"center" })}>
             <img
               src={WindowCleaning}
               alt="Window Cleaning"

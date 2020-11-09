@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Fade from 'react-reveal/Fade';
+import React from "react";
+import PropTypes from "prop-types";
+import Fade from "react-reveal/Fade";
 import { css } from "glamor";
 import { gridContainer } from "../constants/styleRules";
 

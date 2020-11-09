@@ -1,5 +1,4 @@
 import React from "react";
-import { css } from "glamor";
 import TabLayout from "./TabLayout";
 import { tabTitles } from "../constants/tabTitles";
 import { gridItemContainer } from "../constants/styleRules.js";
@@ -9,7 +8,7 @@ const CladdingTab = () => {
     <TabLayout tabTitle={tabTitles.cladding}>
       <div {...gridItemContainer}>
         <p>
-          Cladding on your house if not kept clean can very quickly become a real eye saw,
+          Cladding on your house if not kept clean can very quickly become a real eye sore,
           protect your investment and image of your property.
         </p>
         <p>

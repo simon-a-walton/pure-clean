@@ -41,12 +41,28 @@ const SoftfitTab = () => {
         </q>
       </div>
       <div {...gridItemContainer}>
-        <div {...css({backgroundColor: colors.grey, marginBottom: '16px', textAlign: 'center'})}>
-          <img src={Explanation} {...imgContainer} alt="Soffit Explained" />
+        <div {...css({
+          backgroundColor: colors.grey,
+          marginBottom: '16px',
+          textAlign: 'center'
+        })}>
+          <img
+            src={Explanation}
+            {...imgContainer}
+            alt="Soffit Explained"
+          />
         </div>
         <div {...imgGridContainer}>
-          <img src={SoffitDirty} {...imgContainer} alt="Dirty Soffit" />
-          <img src={SoffitClean} {...imgContainer} alt="Clean Soffit" />
+          <img
+            src={SoffitDirty}
+            {...imgContainer}
+            alt="Dirty Soffit"
+          />
+          <img
+            src={SoffitClean}
+            {...imgContainer}
+            alt="Clean Soffit"
+          />
         </div>
       </div>
     </TabLayout>

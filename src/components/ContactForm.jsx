@@ -1,16 +1,11 @@
 import React from "react";
 import { css } from "glamor";
-import { colors } from "../constants/styleConstants";
 import { buttonStyle, bottomBorder } from "../constants/styleRules";
 
-const formContainer = css({
-  color: 'white'
-});
-
 const inputStyle = css({
-  width: '100%',
-  border: '1px solid white',
-  borderRadius: '8px'
+  width: "100%",
+  border: "1px solid white",
+  borderRadius: "8px"
 });
 
 
@@ -31,10 +26,13 @@ export default class ContactForm extends React.Component {
           onSubmit={this.submitForm}
           action="https://formspree.io/f/mzbkgjnk"
           method="POST"
-          {...formContainer}
+          {...css({ color: "white" })}
         >
-          <h4 {...css({paddingBottom: '24px', '@media(max-width: 992px)': {textAlign: 'center'}})}>
-            <span {...bottomBorder}>GET IN TOUCH</span>
+          <h4
+            {...css({ paddingBottom: "24px", "@media(max-width: 992px)": {textAlign: "center" }})}>
+            <span {...bottomBorder}>
+              GET IN TOUCH
+            </span>
           </h4>
           <p>
             Want to know more about our services or prices? Please fill out this form and one of

@@ -2,10 +2,6 @@ import React from "react";
 import { Modal, Button } from 'react-bootstrap';
 import { buttonStyle, bottomBorder } from "../constants/styleRules";
 import Logo from "../images/logo.jpg";
-import ReactRain from 'react-rain-animation';
-
-// import all the styles
-import "react-rain-animation/lib/style.css";
 
 const RainModal = (props) => {
   return (
@@ -25,9 +21,6 @@ const RainModal = (props) => {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-      <ReactRain
-          numDrops="1500"
-        />
         <br />
         <p>
           It is our policy to complete a scheduled job if it is raining. In the event of
@@ -42,7 +35,14 @@ const RainModal = (props) => {
         />
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide} {...buttonStyle}>Close</Button>
+        <Button
+          onClick={props.onHide}
+          {...buttonStyle}
+        >
+          <h5>
+            Close
+          </h5>
+        </Button>
       </Modal.Footer>
     </Modal>
     </>
