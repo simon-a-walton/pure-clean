@@ -15,19 +15,26 @@ const WFP = () => {
             </span>
           </h4>
           <p>
-            Traditional window cleaning is the use of water and detergent, an applicator to wash and
-            agitate the glass and a squeegee to remove the water. We then use a microfibre cloth to polish up the edges.
-            Your frames are always wiped over and sills will also be wiped down everytime.
+            We use the latest technology in pure water cleaning.
+            Pure water is ordinary tap water that has been filtered through a series of filtration
+            and then through RO (reverse osmosis) which gives you purified water at 0.00ppm
+            (parts per million).
           </p>
           <p>
-            Water fed pole systems are used by most window cleaners now but traditional will always have its place
-            especially for interior cleaning.
-            On some occasions the water fed system cannot be used but as long as the windows can all be reached
-            safely then we will be happy to use the traditional method.
+            The south is a hard water area and ranges from 250 to 350 ppm, so you have to have
+            purified water to clean your windows as if you used water straight from the tap your
+            glass would be heavily stained with limescale which can be very difficult to get off.
+            By using the filtered pure water there is no need to squeegee the water from the
+            windows as pure water dries naturally crystal clear.
           </p>
           <p>
-            The water fed pole system will also not be able to tackle heavily soiled windows,
-            windows that have not been cleaned in a very long time, or if you have had building work on or near your property.
+            When using traditional methods various cleaning agents are used, this can leave a
+            film on the glass which will not get every bit of dirt out of those tiny cracks, so when it
+            rains this dirt can run down the windows making them look dirty again.
+          </p>
+          <p>
+            The soft bristles on the pole remove all dirt from your frames and followed by the pure
+            water rinse there is no dirt to run if the weather takes a turn!
           </p>
         </div>
          <div {...gridItemContainer} {...css({ textAlign:"center" })}>
