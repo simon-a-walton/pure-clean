@@ -2,11 +2,10 @@ import React from "react";
 import { css } from "glamor";
 import { colors } from "../constants/styleConstants";
 import { bottomBorder } from "../constants/styleRules";
-import Cleaner from "../images/cleaner.jpg";
-import Paul from "../images/Paul.jpg";
 import AboutComponent from "../components/AboutComponent";
 import Check from "../images/check.svg";
 import { buttonStyle } from "../constants/styleRules";
+import {Image } from "cloudinary-react";
 
 const titleStyle = css({
   textAlign: "center",
@@ -52,13 +51,6 @@ const listStyle = css({
   },
 });
 
-const imageSize = css({
-  height: "250px",
-  width: "250px",
-  borderRadius: "50%",
-  marginBottom: "30px"
-});
-
 const About = () => {
   return (
     <div>
@@ -94,10 +86,14 @@ const About = () => {
           </p>
         </div>
         <div {...imageContainer}>
-          <img
-            src={Cleaner}
-            {...imageSize}
-            alt="PureClean Cleaning"
+          <Image
+            cloudName="diiwzk17a"
+            publicID="cleaner_aiwkhf.png"
+            gravity="faces"
+            crop="fill"
+            height="250"
+            width="250"
+            radius="max"
           />
         </div>
       </AboutComponent>
@@ -126,10 +122,16 @@ const About = () => {
           </p>
         </div>
         <div {...imageContainer}>
-          <img
-            src={Paul}
-            {...imageSize}
-              alt="PureClean Paul Batty" />
+          <Image
+            cloudName="diiwzk17a"
+            publicID="Paul_flshhy.png"
+            gravity="faces"
+            crop="fill"
+            height="250"
+            width="250"
+            radius="max"
+            {...css({ marginBottom: "8px" })}
+          />
           <h4>
             Paul Batty
           </h4>
