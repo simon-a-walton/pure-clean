@@ -1,7 +1,8 @@
 import React from "react";
+import { css } from "glamor";
 import { Modal, Button } from 'react-bootstrap';
 import { buttonStyle, bottomBorder } from "../constants/styleRules";
-import Logo from "../images/logo.jpg";
+import Rain from "../images/rain.jpg";
 
 const RainModal = (props) => {
   return (
@@ -20,18 +21,12 @@ const RainModal = (props) => {
           </h4>
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body {...css({ textAlign: "center" })}>
         <br />
-        <p>
-          It is our policy to complete a scheduled job if it is raining. In the event of
-          light precipitation we will continue as scheduled because rain does not affect the cleaning.
-          In the event of heavy rain or showers, we will return within 1 to 2 days to complete the outside work.
-          The interior of all windows are completed as scheduled so there is no disruption to your schedule.
-        </p>
-         <img
-          src={Logo}
-          width={150}
-          alt="Logo"
+        <img
+          src={Rain}
+          width={300}
+          alt="Rain Guarantee"
         />
       </Modal.Body>
       <Modal.Footer>
