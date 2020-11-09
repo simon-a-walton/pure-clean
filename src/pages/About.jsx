@@ -113,7 +113,7 @@ const About = () => {
         <p>
           We have great experience in a wide range of exterior cleaning, we tackle:
         </p>
-          <ul {...css({ "& li": {listStyleImage: `url(${Check})` }, padding: "24px" })}>
+          <ul {...css({ "& li": { listStyleImage: `url(${Check})` }, padding: "24px" })}>
             <li>All exterior and interior windows</li>
             <li>Conservatory roof cleaning</li>
             <li>Gutter clearing / cleaning</li>
