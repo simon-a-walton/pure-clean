@@ -1,5 +1,5 @@
 import React from "react";
-import TabLayout from "./TabLayout";
+import TabLayout from "../components/TabLayout";
 import { tabTitles } from "../constants/tabTitles";
 import { gridItemContainer, imgContainer, imgGridContainer } from "../constants/styleRules.js";
 import ConservatoryClean from "../images/conservatory-clean.jpg";
