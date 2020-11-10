@@ -44,7 +44,6 @@ const Navigation = () => {
           {pathname === "/about" ? <Nav.Link href="/about" className="active">About</Nav.Link> : <Nav.Link href="/about">About</Nav.Link>}
           {pathname === "/services" ? <Nav.Link href="/services" className="active">Services</Nav.Link> : <Nav.Link href="/services">Services</Nav.Link>}
           {pathname === "/methods" ? <Nav.Link href="/methods" className="active">Methods</Nav.Link> : <Nav.Link href="/methods">Methods</Nav.Link>}
-          {pathname === "/wfp" ? <Nav.Link href="/wfp" className="active">Water Fed Pole</Nav.Link> : <Nav.Link href="/wfp">Water Fed Pole</Nav.Link>}
           {pathname === "/contact" ? <Nav.Link href="/contact" className="active">Contact Us</Nav.Link> : <Nav.Link href="/contact">Contact Us</Nav.Link>}
           <Nav.Link
             onClick={() => setModalShow(true)} {...rainStyle}>
