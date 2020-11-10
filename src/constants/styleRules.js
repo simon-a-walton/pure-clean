@@ -63,3 +63,31 @@ export const imgContainer = css({
     maxWidth: "100%"
   }
 });
+
+export const tabStyle = css({
+  backgroundColor: colors.darkBlue,
+  padding: "16px",
+  color: "white",
+  "& a": {
+    padding: "16px auto",
+    margin: "0 auto",
+    borderRadius: "4px"
+  },
+  "& .nav-link.active": {
+    color: colors.darkBlue,
+    backgroundColor: "white",
+    borderColor: colors.green
+  },
+    borderBottom: "none",
+  "& a:hover": {
+    color: "white"
+  },
+  "@media(max-width: 800px)": {
+    display: "block",
+    padding: "8px 0",
+    "& a": {
+      padding: "8px",
+      margin: 0
+    }
+  }
+});

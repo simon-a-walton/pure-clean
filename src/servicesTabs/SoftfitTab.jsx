@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "glamor";
-import TabLayout from "./TabLayout";
+import TabLayout from "../components/TabLayout";
 import { colors } from "../constants/styleConstants";
 import { tabTitles } from "../constants/tabTitles";
 import { gridItemContainer, imgContainer, imgGridContainer } from "../constants/styleRules.js";

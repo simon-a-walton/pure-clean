@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
-import WFP from "./pages/WFP";
 import Methods from "./pages/Methods";
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
           <Route path="/about" exact component={() => <About />} />
           <Route path="/contact" exact component={() => <Contact />} />
           <Route path="/services" exact component={() => <Services />} />
-          <Route path="/wfp" exact component={() => <WFP />} />
           <Route path="/methods" exact component={() => <Methods />} />
         </Switch>
         <Footer />
