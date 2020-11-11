@@ -4,8 +4,8 @@ import { colors } from "../constants/styleConstants";
 import { bottomBorder } from "../constants/styleRules";
 import AboutComponent from "../components/AboutComponent";
 import Check from "../images/check.svg";
-import { buttonStyle } from "../constants/styleRules";
 import {Image } from "cloudinary-react";
+import Button from "../components/Button";
 
 const titleStyle = css({
   textAlign: "center",
@@ -149,11 +149,10 @@ const About = () => {
             At PURECLEAN all are highly experienced and carry full public liability
             insurance and all work is carried out to the strictest of health and safety requirements.
           </p>
-          <h5 {...css({ padding:"40px 0", "@media(max-width: 992px)": { textAlign:"center" } })}>
-            <a href="/contact" {...buttonStyle}>
-              Get a Quote!
-            </a>
-          </h5>
+          <Button
+            link="/contact"
+            title="Get a Quote!"
+          />
         </div>
         <div {...css({
           textAlign: "center",

@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../images/header.jpg";
 import { Jumbotron } from "react-bootstrap";
 import { css } from "glamor";
-import { buttonStyle } from "../constants/styleRules";
+import Button from "../components/Button";
 
 const jumboStyle = css({
   backgroundImage: `url(${Header})`,
@@ -35,15 +35,18 @@ const Home = () => {
         <h1 {...jumboText}>
           Residential and commercial professional window cleaning service based in Rustington, West Sussex.
         </h1>
-        <h5 {...css({
-          display: "flex",
-          justifyContent: "center",
-          paddingTop: "16px"
-        })}>
-          <a href="/contact" {...buttonStyle}>
-            Get a Quote!
-          </a>
-        </h5>
+          <div
+            {...css({
+              display: "flex",
+              justifyContent: "center",
+              paddingTop: "16px"
+            })}
+          >
+            <Button
+              link="/contact"
+              title="Get a Quote!"
+            />
+          </div>
       </Jumbotron>
     </div>
   );
