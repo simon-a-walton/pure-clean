@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "glamor";
-import { buttonStyle, bottomBorder } from "../constants/styleRules";
+import { bottomBorder } from "../constants/styleRules";
+import { buttonStyle } from "../components/Button";
 
 const inputStyle = css({
   width: "100%",

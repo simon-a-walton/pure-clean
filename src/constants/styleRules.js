@@ -28,18 +28,6 @@ export const bottomBorder = css({
   borderBottom: `2px solid ${colors.green}`
 });
 
-export const buttonStyle = css({
-  backgroundColor: colors.darkBlue,
-  color: "white",
-  border: `2px solid ${colors.green}`,
-  borderRadius: "8px",
-  padding: "8px 16px",
-  "&:hover": {
-    backgroundColor: "black",
-    color: "white"
-  }
-});
-
 export const imgGridContainer = css({
   backgroundColor: colors.grey,
   display: "grid",

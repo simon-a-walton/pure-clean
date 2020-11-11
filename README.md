@@ -18,3 +18,8 @@ A ReactJS website for a new window cleaning company, bootstrapped with [Create R
 💅 Glamor
 ☁️ Cloudinary
 🎨 Figma
+
+## Please hire me!
+
+Currently looking for new opportunities (https://www.linkedin.com/in/simon-walton-36457323/).
+

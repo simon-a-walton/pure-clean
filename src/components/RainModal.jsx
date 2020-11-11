@@ -1,7 +1,8 @@
 import React from "react";
 import { css } from "glamor";
 import { Modal, Button } from 'react-bootstrap';
-import { buttonStyle, bottomBorder } from "../constants/styleRules";
+import { bottomBorder } from "../constants/styleRules";
+import { buttonStyle } from "../components/Button";
 
 import UmbrellaBG from "../images/UmbrellaBG.png";
 

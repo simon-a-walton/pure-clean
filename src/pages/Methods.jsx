@@ -6,11 +6,14 @@ import WindowCleaning from "../images/window-cleaning.svg";
 import { gridItemContainer, tabStyle } from "../constants/styleRules";
 import WaterDrop from "../images/tint-solid.svg";
 import TabLayout from "../components/TabLayout";
+import Button from "../components/Button";
 
 export const waterList = css({
+  margin: 0,
+  padding: 0,
   listStyleImage: `url(${WaterDrop})`,
-  '& li': {
-    margin: '24px 0'
+  "& li": {
+    margin: "24px 0"
   }
 });
 
@@ -46,6 +49,10 @@ const Methods = () => {
                 src={Window}
                 alt="Window"
               />
+              <Button
+                link="/contact"
+                title="Get a Quote!"
+              />
             </div>
           </TabLayout>
         </Tab>
@@ -77,10 +84,14 @@ const Methods = () => {
                 </li>
               </ul>
             </div>
-            <div {...gridItemContainer} {...css({textAlign:"center" })}>
-              <img
+               <div {...gridItemContainer} {...css({textAlign:"center" })}>
+                <img
                 src={WindowCleaning}
                 alt="Window Cleaning"
+              />
+              <Button
+                link="/contact"
+                title="Get a Quote!"
               />
             </div>
           </TabLayout>
