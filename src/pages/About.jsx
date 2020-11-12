@@ -4,7 +4,7 @@ import { colors } from "../constants/styleConstants";
 import { bottomBorder } from "../constants/styleRules";
 import AboutComponent from "../components/AboutComponent";
 import Check from "../images/check.svg";
-import {Image } from "cloudinary-react";
+import { Image } from "cloudinary-react";
 import Button from "../components/Button";
 
 const titleStyle = css({
