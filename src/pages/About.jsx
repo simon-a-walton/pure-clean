@@ -124,7 +124,7 @@ const About = () => {
         <div {...imageContainer}>
           <Image
             cloudName="diiwzk17a"
-            publicID="Paul_flshhy.png"
+            publicID="fakepaul_bbekb3.png"
             gravity="faces"
             crop="fill"
             height="250"
@@ -133,7 +133,7 @@ const About = () => {
             {...css({ marginBottom: "8px" })}
           />
           <h4>
-            Paul Batty
+            {/*PB*/}
           </h4>
         </div>
       </AboutComponent>
