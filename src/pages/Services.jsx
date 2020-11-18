@@ -3,6 +3,7 @@ import { Tabs, Tab } from "react-bootstrap";
 import { css } from "glamor";
 import { colors } from "../constants/styleConstants";
 import { tabTitles } from "../constants/tabTitles";
+import CommercialTab from "../servicesTabs/CommercialTab";
 import SoftfitTab from "../servicesTabs/SoftfitTab";
 import GutterTab from "../servicesTabs/GutterTab";
 import SolarTab from "../servicesTabs/SolarTab";
@@ -33,7 +34,10 @@ const checkList = css({
 const Services = () => {
   return(
     <div>
-      <Tabs defaultActiveKey="softfit" id="services-tab" {...tabStyle}>
+      <Tabs defaultActiveKey="commercial" id="services-tab" {...tabStyle}>
+        <Tab eventKey="commercial" title={tabTitles.commercial}>
+          <CommercialTab />
+        </Tab>
         <Tab eventKey="softfit" title={tabTitles.softfit}>
           <SoftfitTab />
         </Tab>
