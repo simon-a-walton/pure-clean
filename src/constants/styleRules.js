@@ -70,7 +70,7 @@ export const tabStyle = css({
   "& a:hover": {
     color: "white"
   },
-  "@media(max-width: 800px)": {
+  "@media(max-width: 1100px)": {
     display: "block",
     padding: "8px 0",
     "& a": {
