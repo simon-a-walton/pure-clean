@@ -20,7 +20,7 @@ const navMargin = select("& a", {
 
 const rainStyle = css({
   fontSize: "0.6em",
-  lineHeight: "38px",
+  lineHeight: "27px",
   padding: "8px 0",
   "@media(max-width: 992px)": {
     lineHeight: "20px",
@@ -47,8 +47,10 @@ const Navigation = () => {
           ))}
           <Nav.Link
             onClick={() => setModalShow(true)} {...rainStyle}>
-              <i className="fas fa-umbrella" />
-              &nbsp; Rain Guarantee
+              Rain Guarantee &nbsp;
+                <span {...css({ verticalAlign: "text-bottom", fontSize: "0.6em" })}>
+                  <i className="fas fa-umbrella" />
+                </span>
           </Nav.Link>
         </Nav>
         <RainModal
