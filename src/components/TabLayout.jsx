@@ -32,7 +32,8 @@ class TabLayout extends React.PureComponent {
           marginBottom: "24px",
           "@media(max-width: 992px)": {
             textAlign: "center",
-            marginBottom: "16px"
+            marginBottom: "16px",
+            lineHeight: "40px"
           }
         })}>
           <span {...bottomBorder}>{this.props.tabTitle}</span>
