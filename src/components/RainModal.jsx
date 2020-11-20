@@ -17,11 +17,11 @@ const RainModal = (props) => {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter" >
-          <h4 >
+          <h4>
             <span {...bottomBorder}>Our Rain Guarantee</span>
-              <span {...css({ verticalAlign: "text-top", fontSize: "0.6em" })}>
-                &nbsp;&nbsp;<i className="fas fa-umbrella" />
-              </span>
+            <span {...css({ verticalAlign: "text-top", fontSize: "0.6em" })}>
+              &nbsp;&nbsp;<i className="fas fa-umbrella" />
+            </span>
           </h4>
         </Modal.Title>
       </Modal.Header>
