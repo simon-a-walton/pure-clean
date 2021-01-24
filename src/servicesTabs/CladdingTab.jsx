@@ -2,11 +2,13 @@ import React from "react";
 import TabLayout from "../components/TabLayout";
 import { tabTitles } from "../constants/tabTitles";
 import { gridItemContainer } from "../constants/styleRules.js";
+import Header from "../components/Header";
 
 const CladdingTab = () => {
   return (
     <TabLayout tabTitle={tabTitles.cladding}>
       <div {...gridItemContainer}>
+        <Header title={tabTitles.cladding} />
         <p>
           Cladding on your house if not kept clean can very quickly become a real eye sore,
           protect your investment and image of your property.

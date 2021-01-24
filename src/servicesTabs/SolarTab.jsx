@@ -2,11 +2,13 @@ import React from "react";
 import TabLayout from "../components/TabLayout";
 import { tabTitles } from "../constants/tabTitles";
 import { gridItemContainer } from "../constants/styleRules.js";
+import Header from "../components/Header";
 
 const SolarTab = () => {
   return (
     <TabLayout tabTitle={tabTitles.solar}>
       <div {...gridItemContainer}>
+        <Header title={tabTitles.solar} />
         <p>
           Protect your investment and increase the energy efficiency of your home with our professional and
           totally safe solar panel clean.

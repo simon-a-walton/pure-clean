@@ -2,11 +2,14 @@ import React from "react";
 import TabLayout from "../components/TabLayout";
 import { tabTitles } from "../constants/tabTitles";
 import { gridItemContainer } from "../constants/styleRules.js";
+import Header from "../components/Header";
+
 
 const CommercialTab = () => {
   return (
     <TabLayout tabTitle={tabTitles.commercial}>
       <div {...gridItemContainer}>
+        <Header title={tabTitles.commercial} />
         <p>
           Traditional exterior and interior window cleaning as well as the latest water fed pole system.
           With many years of experience in the industry we take great pride in offering a quality tailored

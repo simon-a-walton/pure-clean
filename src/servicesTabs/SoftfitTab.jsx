@@ -7,11 +7,13 @@ import { gridItemContainer, imgContainer, imgGridContainer } from "../constants/
 import SoffitClean from "../images/soffit-clean.jpg";
 import SoffitDirty from "../images/soffit-dirty.jpg";
 import Explanation from "../images/explanation.jpg";
+import Header from "../components/Header";
 
 const SoftfitTab = () => {
   return (
     <TabLayout tabTitle={tabTitles.softfit}>
       <div {...gridItemContainer}>
+        <Header title={tabTitles.softfit} />
         <h5>
           THE FASCIA
         </h5>
