@@ -19,7 +19,7 @@ export const waterList = css({
 
 const Methods = () => {
   return (
-    <div>
+    <div {...css({ minHeight: "82vh" }) }>
       <Tabs defaultActiveKey="traditional" id="methods-tabs" {...tabStyle}>
         <Tab eventKey="traditional" title="Traditional">
           <TabLayout tabTitle="Traditional Methods">

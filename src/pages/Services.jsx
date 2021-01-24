@@ -31,26 +31,30 @@ const checkList = css({
   }
 });
 
+const minHeight = css({
+  minHeight: "65vh"
+});
+
 const Services = () => {
   return(
-    <div>
+    <div {...css({ minHeight: "82vh" }) }>
       <Tabs defaultActiveKey="commercial" id="services-tab" {...tabStyle}>
-        <Tab eventKey="commercial" title={tabTitles.commercial}>
+        <Tab eventKey="commercial" title={tabTitles.commercial} {...minHeight }>
           <CommercialTab />
         </Tab>
         <Tab eventKey="softfit" title={tabTitles.softfit}>
           <SoftfitTab />
         </Tab>
-         <Tab eventKey="conservatory" title={tabTitles.conservatory}>
+         <Tab eventKey="conservatory" title={tabTitles.conservatory} {...minHeight }>
           <ConservatoryTab />
         </Tab>
-        <Tab eventKey="gutter" title={tabTitles.gutter}>
+        <Tab eventKey="gutter" title={tabTitles.gutter} {...minHeight }>
           <GutterTab />
         </Tab>
-        <Tab eventKey="solar" title={tabTitles.solar}>
+        <Tab eventKey="solar" title={tabTitles.solar} {...minHeight }>
           <SolarTab />
         </Tab>
-        <Tab eventKey="cladding" title={tabTitles.cladding}>
+        <Tab eventKey="cladding" title={tabTitles.cladding} {...minHeight }>
           <CladdingTab />
         </Tab>
       </Tabs>
