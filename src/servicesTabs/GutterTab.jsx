@@ -2,12 +2,14 @@ import React from "react";
 import TabLayout from "../components/TabLayout";
 import { tabTitles } from "../constants/tabTitles";
 import { gridItemContainer, warningList } from "../constants/styleRules.js";
+import Header from "../components/Header";
 
 
 const GutterTab = () => {
   return (
     <TabLayout tabTitle={tabTitles.gutter}>
       <div {...gridItemContainer}>
+        <Header title={tabTitles.gutter} />
         <p>
           A blocked gutter can cause serious water damage to your property which can then lead to costly repair bills.
           We recommend getting your gutters cleaned at least once a year

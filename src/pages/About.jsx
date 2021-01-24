@@ -133,7 +133,7 @@ const About = () => {
             {...css({ marginBottom: "8px" })}
           />
           <h4>
-            {/*PB*/}
+            PAUL BATTY
           </h4>
         </div>
       </AboutComponent>

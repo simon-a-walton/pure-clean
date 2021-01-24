@@ -8,7 +8,7 @@ const jumboStyle = css({
   backgroundImage: `url(${Header})`,
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
-  height: "75vh",
+  minHeight: "82vh",
   width: "100%",
   marginBottom: "0",
   "@media(max-width: 650px)": {
@@ -30,7 +30,7 @@ const jumboText = css({
 
 const Home = () => {
   return (
-    <div>
+    <div {...css({ minHeight: "82vh" }) }>
       <Jumbotron {...jumboStyle}>
         <h1 {...jumboText}>
           Residential and commercial professional window cleaning service based in Rustington, West Sussex.

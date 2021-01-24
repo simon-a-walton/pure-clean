@@ -20,7 +20,7 @@ const navMargin = select("& a", {
 
 const rainStyle = css({
   fontSize: "0.6em",
-  lineHeight: "27px",
+  lineHeight: "1.5rem",
   padding: "8px 0",
   "@media(max-width: 992px)": {
     lineHeight: "20px",

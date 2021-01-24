@@ -7,7 +7,7 @@ import Logo from "../images/logo.jpg";
 
 const Contact = () => {
   return (
-    <div {...css({ backgroundImage: `linear-gradient(135deg, ${colors.darkBlue}, ${colors.mainBlue})`, color: "white" })}>
+    <div {...css({ backgroundImage: `linear-gradient(135deg, ${colors.darkBlue}, ${colors.mainBlue})`, color: "white", minHeight: "82vh"})}>
       <div {...gridContainer}>
         <div>
           <ContactForm />

@@ -4,11 +4,13 @@ import { tabTitles } from "../constants/tabTitles";
 import { gridItemContainer, imgContainer, imgGridContainer } from "../constants/styleRules.js";
 import ConservatoryClean from "../images/conservatory-clean.jpg";
 import ConservatoryDirty from "../images/conservatory-dirty.jpg";
+import Header from "../components/Header";
 
 const ConservatoryTab = () => {
   return (
     <TabLayout tabTitle={tabTitles.conservatory}>
       <div {...gridItemContainer}>
+        <Header title={tabTitles.conservatory} />
         <p>
           Protect your investment with our professional conservatory cleaning- we offer professional conservatory
           cleaning and will bring your conservatory back to life. We use a combination of our pure water fed system
