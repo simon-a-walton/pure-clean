@@ -88,7 +88,7 @@ const About = () => {
         <div {...imageContainer}>
           <Image
             cloudName="diiwzk17a"
-            publicID="cleaner_aiwkhf.png"
+            publicID="image3_zopyg2.png"
             gravity="faces"
             crop="fill"
             height="250"
@@ -124,13 +124,13 @@ const About = () => {
         <div {...imageContainer}>
           <Image
             cloudName="diiwzk17a"
-            publicID="fakepaul_bbekb3.png"
+            publicID="image4_xl8vw4.png"
             gravity="faces"
             crop="fill"
             height="250"
             width="250"
             radius="max"
-            {...css({ marginBottom: "8px" })}
+            {...css({ marginBottom: "8px", minWidth: "250px", height: "auto" })}
           />
           <h4>
             PAUL BATTY

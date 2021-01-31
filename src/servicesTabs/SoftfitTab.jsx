@@ -3,7 +3,7 @@ import { css } from "glamor";
 import TabLayout from "../components/TabLayout";
 import { colors } from "../constants/styleConstants";
 import { tabTitles } from "../constants/tabTitles";
-import { gridItemContainer, imgContainer, imgGridContainer } from "../constants/styleRules.js";
+import { gridItemContainer, imgContainer, imgGridContainer, gridImageContainer, greyImageBg } from "../constants/styleRules.js";
 import SoffitClean from "../images/soffit-clean.jpg";
 import SoffitDirty from "../images/soffit-dirty.jpg";
 import Explanation from "../images/explanation.jpg";
@@ -42,18 +42,12 @@ const SoftfitTab = () => {
           </em>
         </q>
       </div>
-      <div {...gridItemContainer}>
-        <div {...css({
-          backgroundColor: colors.grey,
-          marginBottom: '16px',
-          textAlign: 'center'
-        })}>
+      <div {...gridImageContainer} {...greyImageBg}>
           <img
             src={Explanation}
             {...imgContainer}
             alt="Soffit Explained"
           />
-        </div>
         <div {...imgGridContainer}>
           <img
             src={SoffitDirty}

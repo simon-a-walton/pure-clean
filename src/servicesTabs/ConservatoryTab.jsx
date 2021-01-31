@@ -1,7 +1,7 @@
 import React from "react";
 import TabLayout from "../components/TabLayout";
 import { tabTitles } from "../constants/tabTitles";
-import { gridItemContainer, imgContainer, imgGridContainer } from "../constants/styleRules.js";
+import { gridItemContainer, imgContainer, imgGridContainer, greyImageBg } from "../constants/styleRules.js";
 import ConservatoryClean from "../images/conservatory-clean.jpg";
 import ConservatoryDirty from "../images/conservatory-dirty.jpg";
 import Header from "../components/Header";
@@ -23,7 +23,7 @@ const ConservatoryTab = () => {
         </p>
       </div>
       <div {...gridItemContainer}>
-        <div {...imgGridContainer}>
+        <div {...imgGridContainer} {...greyImageBg}>
           <img
             src={ConservatoryDirty}
             {...imgContainer}

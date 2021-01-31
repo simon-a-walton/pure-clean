@@ -3,7 +3,7 @@ import { css } from "glamor";
 import { colors } from "../constants/styleConstants";
 import ContactForm from "../components/ContactForm";
 import { gridContainer } from "../constants/styleRules";
-import Logo from "../images/logo.jpg";
+import Logo from "../images/vanlogo.png";
 
 const Contact = () => {
   return (
@@ -43,7 +43,7 @@ const Contact = () => {
               <a href="tel:07702 113360" target="_blank" rel="noreferrer">
                 <h6>
                   <i className="fas fa-mobile-alt" />
-                  &nbsp; &nbsp; Paul: 07702 113360
+                  &nbsp; &nbsp; Paul: 07727 117136
                 </h6>
               </a>
               <a href="mailto:purecleanwindow@outlook.com" target="_blank" rel="noreferrer">

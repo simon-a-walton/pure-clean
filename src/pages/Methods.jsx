@@ -1,9 +1,9 @@
 import React from "react";
 import { css } from "glamor";
-import Window from "../images/clean-window-glass.svg";
+import Window from "../images/image3.jpeg";
 import { Tabs, Tab } from "react-bootstrap";
-import WindowCleaning from "../images/window-cleaning.svg";
-import { gridItemContainer, tabStyle } from "../constants/styleRules";
+import WindowCleaning from "../images/image2.jpeg";
+import { gridItemContainer, tabStyle, gridImageContainer } from "../constants/styleRules";
 import WaterDrop from "../images/tint-solid.svg";
 import TabLayout from "../components/TabLayout";
 import Button from "../components/Button";
@@ -44,15 +44,16 @@ const Methods = () => {
                 </li>
               </ul>
             </div>
-            <div {...gridItemContainer} {...css({textAlign:"center" })}>
+            <div {...gridImageContainer} {...css({textAlign:"center" })}>
               <img
                 src={Window}
-                alt="Window"
+                alt="Traditional Window Cleaning"
+                {...css({ width: "60%", height: "auto" })}
               />
-              <Button
+             {/* <Button
                 link="/contact"
                 title="Get a Quote!"
-              />
+              />*/}
             </div>
           </TabLayout>
         </Tab>
@@ -84,15 +85,16 @@ const Methods = () => {
                 </li>
               </ul>
             </div>
-               <div {...gridItemContainer} {...css({textAlign:"center" })}>
+               <div {...gridImageContainer} {...css({textAlign:"center" })}>
                 <img
                 src={WindowCleaning}
-                alt="Window Cleaning"
+                alt="Waterfed Pole Cleaning"
+                {...css({ width: "70%", height: "auto" })}
               />
-              <Button
+             {/* <Button
                 link="/contact"
                 title="Get a Quote!"
-              />
+              />*/}
             </div>
           </TabLayout>
         </Tab>

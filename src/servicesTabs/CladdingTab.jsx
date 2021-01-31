@@ -1,8 +1,10 @@
 import React from "react";
 import TabLayout from "../components/TabLayout";
 import { tabTitles } from "../constants/tabTitles";
-import { gridItemContainer } from "../constants/styleRules.js";
+import { gridItemContainer, gridImageContainer } from "../constants/styleRules.js";
 import Header from "../components/Header";
+import Cladding from "../images/image6.png";
+import { css } from "glamor";
 
 const CladdingTab = () => {
   return (
@@ -19,12 +21,14 @@ const CladdingTab = () => {
           like new and will expand the life of the cladding.
         </p>
       </div>
-      <div {...gridItemContainer}>
+      <div {...gridImageContainer}>
         <img
-          class="img-fluid rounded mb-4 mb-lg-0"
-          src="http://placehold.it/900x400"
-          alt=""
+          class="img-fluid mb-4 mb-lg-0"
+          src={Cladding}
+          alt="Cladding cleaning"
+          {...css({ maxWidth: "60%", height: "auto" })}
         />
+
       </div>
     </TabLayout>
   );
