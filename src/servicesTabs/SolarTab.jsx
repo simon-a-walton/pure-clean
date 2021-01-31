@@ -1,8 +1,10 @@
 import React from "react";
 import TabLayout from "../components/TabLayout";
 import { tabTitles } from "../constants/tabTitles";
-import { gridItemContainer } from "../constants/styleRules.js";
+import { gridItemContainer, gridImageContainer } from "../constants/styleRules.js";
 import Header from "../components/Header";
+import Solar from "../images/image0.jpeg";
+import { css } from "glamor";
 
 const SolarTab = () => {
   return (
@@ -23,11 +25,12 @@ const SolarTab = () => {
           penetrate into the panels and thereby increasing the efficiency of your solar panels.
         </p>
       </div>
-      <div {...gridItemContainer}>
+      <div {...gridImageContainer}>
         <img
-          class="img-fluid rounded mb-4 mb-lg-0"
-          src="http://placehold.it/900x400"
-          alt=""
+          class="img-fluid mb-4 mb-lg-0"
+          src={Solar}
+          alt="Solar panel cleaning"
+          {...css({ maxWidth: "100%", height: "auto" })}
         />
       </div>
     </TabLayout>

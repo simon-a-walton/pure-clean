@@ -1,8 +1,10 @@
 import React from "react";
 import TabLayout from "../components/TabLayout";
 import { tabTitles } from "../constants/tabTitles";
-import { gridItemContainer } from "../constants/styleRules.js";
+import { gridItemContainer, gridImageContainer } from "../constants/styleRules.js";
 import Header from "../components/Header";
+import Commercial from "../images/image2.jpeg";
+import { css } from "glamor";
 
 
 const CommercialTab = () => {
@@ -24,11 +26,12 @@ const CommercialTab = () => {
           services on a regular basis year after year.
         </p>
       </div>
-      <div {...gridItemContainer}>
+      <div {...gridImageContainer}>
         <img
-          class="img-fluid rounded mb-4 mb-lg-0"
-          src="http://placehold.it/900x400"
-          alt=""
+          class="img-fluid mb-4 mb-lg-0"
+          src={Commercial}
+          alt="Commerical Cleaning"
+          {...css({ maxWidth: "60%", height: "auto" })}
         />
       </div>
     </TabLayout>

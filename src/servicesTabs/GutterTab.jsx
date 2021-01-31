@@ -1,9 +1,10 @@
 import React from "react";
 import TabLayout from "../components/TabLayout";
 import { tabTitles } from "../constants/tabTitles";
-import { gridItemContainer, warningList } from "../constants/styleRules.js";
+import { gridItemContainer, gridImageContainer, warningList } from "../constants/styleRules.js";
 import Header from "../components/Header";
-
+import Gutter from "../images/Image1.jpg";
+import { css } from "glamor";
 
 const GutterTab = () => {
   return (
@@ -28,11 +29,12 @@ const GutterTab = () => {
           <li>Can cause cracks to the walls</li>
         </ul>
       </div>
-      <div {...gridItemContainer}>
+      <div {...gridImageContainer}>
         <img
-          class="img-fluid rounded mb-4 mb-lg-0"
-          src="http://placehold.it/900x400"
-          alt=""
+          class="img-fluid mb-4 mb-lg-0"
+          src={Gutter}
+          alt="Gutter clearing"
+          {...css({ maxWidth: "70%", height: "auto" })}
         />
       </div>
     </TabLayout>
