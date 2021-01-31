@@ -33,10 +33,10 @@ const RainModal = (props) => {
         <br />
         <p>
           I offer a regular service to my customers, and if I am going to do that, then I need to be
-          working out on the rainy days too. I offer 100% satisfaction guarantee anyway, if I have cleaned
+          working out on the rainy days too. I offer 100% satisfaction guarantee anyway. If I have cleaned
           your windows (raining or not) and if they are not cleaned right, I will happily do them again for free.
           I would rather clean them again, and you be happy, than you being unsatisfied with my service.
-          So I 'put my money where my mouth is' regarding cleaning windows in the rain.
+          So I put my money where my mouth is regarding cleaning windows in the rain.
         </p>
         <br />
         <p>

@@ -78,10 +78,10 @@ const About = () => {
             <br />
             <br />
             Attention to detail is important to us whether it is a traditional approach or our sophisticated pure water
-            system. Both service’s include wiping down frames and sills making sure that the whole window is kept clean.
+            system. Both services include wiping down frames and sills making sure that the whole window is kept clean.
             <br />
             <br />
-            Our customer’s have found us to be reliable and trustworthy and have been using us for lots of different
+            Our customers have found us to be reliable and trustworthy and have been using us for lots of different
             services on a regular basis year after year.
           </p>
         </div>
