@@ -20,6 +20,27 @@ export const gridItemContainer = css({
   }
 });
 
+export const gridImageContainer = css({
+  maxWidth: "500px",
+  margin: "auto auto",
+  textAlign: "center",
+  "& img":{
+    padding: "16px",
+    backgroundColor: colors.grey
+  },
+  "@media(max-width: 992px)": {
+    padding: "16px 0"
+  }
+});
+
+export const greyImageBg = css({
+  "& img": {
+    backgroundColor: colors.grey,
+    padding: "16px",
+    marginBottom: "16px"
+  }
+});
+
 export const warningList = css({
   listStyleImage: `url(${Exclamation})`
 });
@@ -29,7 +50,6 @@ export const bottomBorder = css({
 });
 
 export const imgGridContainer = css({
-  backgroundColor: colors.grey,
   display: "grid",
   gridTemplateColumns: "50% 50%",
   marginBottom: "16px",
