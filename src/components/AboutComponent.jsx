@@ -14,7 +14,16 @@ class AboutComponent extends React.PureComponent {
   render() {
     return (
       <Fade>
-        <section {...css({background: this.props.bgColor, color: this.props.color})} >
+        <section {...css({
+          background: this.props.bgColor,
+          color: this.props.color,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
+          backgroundPosition: "right",
+          "@media(max-width: 650px)": {
+            backgroundPosition: "50% 10%",
+          }
+        })} >
          <div {...gridContainer}>
           {this.props.children}
         </div>
