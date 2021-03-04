@@ -3,7 +3,7 @@ import { css } from "glamor";
 import { colors } from "../constants/styleConstants";
 import ContactForm from "../components/ContactForm";
 import { gridContainer } from "../constants/styleRules";
-import Logo from "../images/vanlogo.png";
+import Van from "../images/PureClean Van.png";
 
 const Contact = () => {
   return (
@@ -35,9 +35,10 @@ const Contact = () => {
             }
           })}>
             <img
-              src={Logo}
+              src={Van}
               width={200}
-              alt="logo"
+              alt="PureClean Van"
+              className="rounded"
             />
             <div {...css({ padding:"12px", textAlign:"left" })}>
               <a href="tel:07702 113360" target="_blank" rel="noreferrer">
