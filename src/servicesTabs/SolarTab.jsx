@@ -27,7 +27,7 @@ const SolarTab = () => {
       </div>
       <div {...gridImageContainer}>
         <img
-          class="img-fluid mb-4 mb-lg-0"
+          class="img-fluid mb-4 mb-lg-0 rounded"
           src={Solar}
           alt="Solar panel cleaning"
           {...css({ maxWidth: "100%", height: "auto" })}

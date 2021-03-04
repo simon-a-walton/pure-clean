@@ -47,17 +47,20 @@ const SoftfitTab = () => {
             src={Explanation}
             {...imgContainer}
             alt="Soffit Explained"
+            className="rounded"
           />
         <div {...imgGridContainer}>
           <img
             src={SoffitDirty}
             {...imgContainer}
             alt="Dirty Soffit"
+            className="rounded"
           />
           <img
             src={SoffitClean}
             {...imgContainer}
             alt="Clean Soffit"
+            className="rounded"
           />
         </div>
       </div>

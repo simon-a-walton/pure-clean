@@ -26,6 +26,7 @@ const CladdingTab = () => {
           class="img-fluid mb-4 mb-lg-0"
           src={Cladding}
           alt="Cladding cleaning"
+          className="rounded"
           {...css({ maxWidth: "60%", height: "auto" })}
         />
 

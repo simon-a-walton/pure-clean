@@ -4,8 +4,10 @@ import { colors } from "../constants/styleConstants";
 import { bottomBorder } from "../constants/styleRules";
 import AboutComponent from "../components/AboutComponent";
 import Check from "../images/check.svg";
-import { Image } from "cloudinary-react";
+import PaulCleaning from "../images/Paul Cleaning.png";
+import PaulBatty from "../images/Paul Batty.png";
 import Button from "../components/Button";
+import VanBG from "../images/VanBG.png";
 
 const titleStyle = css({
   textAlign: "center",
@@ -64,10 +66,10 @@ const About = () => {
         </p>
       </div>
       <AboutComponent
-        bgColor="white"
+        bgColor={ `url(${VanBG})`}
         color="black"
       >
-        <div {...textContainer}>
+        <div {...textContainer} >
           <h4 {...headingStyle}>
             <span {...bottomBorder}>WE OFFER</span>
           </h4>
@@ -86,14 +88,11 @@ const About = () => {
           </p>
         </div>
         <div {...imageContainer}>
-          <Image
-            cloudName="diiwzk17a"
-            publicID="image3_zopyg2.png"
-            gravity="faces"
-            crop="fill"
-            height="250"
-            width="250"
-            radius="max"
+          <img
+            src={PaulCleaning}
+            alt="Paul Cleaning"
+            width="250px"
+            height="auto"
           />
         </div>
       </AboutComponent>
@@ -122,15 +121,12 @@ const About = () => {
           </p>
         </div>
         <div {...imageContainer}>
-          <Image
-            cloudName="diiwzk17a"
-            publicID="image4_xl8vw4.png"
-            gravity="faces"
-            crop="fill"
-            height="250"
-            width="250"
-            radius="max"
+          <img
+            src={PaulBatty}
+            alt="Paul Batty"
             {...css({ marginBottom: "8px", minWidth: "250px", height: "auto" })}
+            width="250px"
+            height="auto"
           />
           <h4>
             PAUL BATTY

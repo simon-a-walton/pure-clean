@@ -31,6 +31,7 @@ const CommercialTab = () => {
           class="img-fluid mb-4 mb-lg-0"
           src={Commercial}
           alt="Commerical Cleaning"
+          className="rounded"
           {...css({ maxWidth: "60%", height: "auto" })}
         />
       </div>

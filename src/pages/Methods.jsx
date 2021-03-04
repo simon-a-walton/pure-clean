@@ -49,6 +49,7 @@ const Methods = () => {
                 src={Window}
                 alt="Traditional Window Cleaning"
                 {...css({ width: "60%", height: "auto" })}
+                className="rounded"
               />
              {/* <Button
                 link="/contact"
@@ -90,6 +91,7 @@ const Methods = () => {
                 src={WindowCleaning}
                 alt="Waterfed Pole Cleaning"
                 {...css({ width: "70%", height: "auto" })}
+                className="rounded"
               />
              {/* <Button
                 link="/contact"

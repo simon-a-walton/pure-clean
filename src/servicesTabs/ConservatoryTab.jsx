@@ -28,11 +28,13 @@ const ConservatoryTab = () => {
             src={ConservatoryDirty}
             {...imgContainer}
             alt="Dirty Conservatory"
+            className="rounded"
           />
           <img
             src={ConservatoryClean}
             {...imgContainer}
             alt="Clean Conservatory"
+            className="rounded"
           />
         </div>
       </div>
