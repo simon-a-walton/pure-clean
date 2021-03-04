@@ -31,7 +31,7 @@ const GutterTab = () => {
       </div>
       <div {...gridImageContainer}>
         <img
-          class="img-fluid mb-4 mb-lg-0"
+          class="img-fluid mb-4 mb-lg-0 rounded"
           src={Gutter}
           alt="Gutter clearing"
           {...css({ maxWidth: "70%", height: "auto" })}
