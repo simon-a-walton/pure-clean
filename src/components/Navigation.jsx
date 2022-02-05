@@ -1,5 +1,7 @@
 import React from "react";
 import Logo from "../images/logo.jpg";
+import CheckATrade from "../images/checkatrade-logo.jpg";
+import WaterDrop from "../images/water-pure-clean.jpg";
 import { Nav, Navbar } from "react-bootstrap";
 import { css, select } from "glamor";
 import RainModal from "../components/RainModal";
@@ -32,12 +34,26 @@ const Navigation = () => {
   const [modalShow, setModalShow] = React.useState(false);
   return (
     <Navbar collapseOnSelect expand="lg" {...navStyle}>
-      <Navbar.Brand href="/">
+      <Navbar.Brand href="/" {...css({display: "flex", height: "auto"})}>
         <img
           src={Logo}
           alt="PureClean Logo"
           width={180}
         />
+        <span {...css({ marginLeft: "-15px" })}>
+           <img
+            src={WaterDrop}
+            alt="WaterDrop Pureclean Logo"
+            width={25}
+                {...css({ display: "block", margin: "6px auto" })}
+          />
+          <img
+            src={CheckATrade}
+            alt="CheckATrade Logo"
+            width={80}
+            {...css({ display: "block", margin: "auto" })}
+          />
+        </span>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">

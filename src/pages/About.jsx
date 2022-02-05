@@ -5,7 +5,7 @@ import { bottomBorder } from "../constants/styleRules";
 import AboutComponent from "../components/AboutComponent";
 import Check from "../images/check.svg";
 import PaulCleaning from "../images/Paul Cleaning.png";
-import PaulBatty from "../images/Paul Batty.png";
+import PureCleanVan from "../images/purecleanvan.png";
 import Button from "../components/Button";
 import VanBG from "../images/VanBG.png";
 
@@ -122,15 +122,12 @@ const About = () => {
         </div>
         <div {...imageContainer}>
           <img
-            src={PaulBatty}
-            alt="Paul Batty"
+            src={PureCleanVan}
+            alt="PureCleanVan"
             {...css({ marginBottom: "8px", minWidth: "250px", height: "auto" })}
             width="250px"
             height="auto"
           />
-          <h4>
-            PAUL BATTY
-          </h4>
         </div>
       </AboutComponent>
       <AboutComponent
